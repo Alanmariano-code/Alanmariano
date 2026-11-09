@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Júpiter: o Gigante Gasoso do Sistema Solar</title>
+    <style>
+      :root {
+        --bg: #f5f1ea;
+        --panel: rgba(255, 253, 249, 0.92);
+        --text: #1f1f1f;
+        --muted: #5d5d5d;
+        --accent: #d57a38;
+        --accent-dark: #7d4320;
+        --line: rgba(31, 31, 31, 0.12);
+        --shadow: rgba(17, 29, 54, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(117, 140, 255, 0.22), transparent 35%),
+          radial-gradient(circle at bottom right, rgba(255, 171, 90, 0.18), transparent 25%),
+          linear-gradient(180deg, #0b1220 0%, #111a2a 35%, #f6f0e6 100%);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 52px 20px 80px;
+      }
+
+      .article-card {
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 22px;
+        box-shadow: 0 30px 60px var(--shadow);
+        padding: 56px 52px;
+        backdrop-filter: blur(2px);
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        font-size: 0.75rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent-dark);
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(2.3rem, 5vw, 4rem);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        color: #1a1f2a;
+      }
+
+      .meta {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .feature-image {
+        width: 100%;
+        max-height: 440px;
+        object-fit: cover;
+        display: block;
+        border-radius: 16px;
+        margin: 0 0 28px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        box-shadow: 0 18px 38px rgba(30, 23, 17, 0.12);
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin: 28px 0 30px;
+      }
+
+      .image-card {
+        margin: 0;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .image-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .image-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        box-shadow: 0 12px 24px rgba(30, 23, 17, 0.08);
+      }
+
+      .image-card figcaption {
+        margin-top: 8px;
+        font-size: 0.8rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      p {
+        margin: 0 0 20px;
+        font-size: 1.08rem;
+      }
+
+      h2 {
+        margin: 42px 0 16px;
+        font-size: clamp(1.5rem, 2vw, 2rem);
+        line-height: 1.2;
+        color: #1d2430;
+      }
+
+      blockquote {
+        margin: 28px 0;
+        padding: 18px 22px;
+        background: linear-gradient(90deg, #f9e9dc 0%, #f5efe9 100%);
+        border-left: 4px solid var(--accent);
+        border-radius: 10px;
+        color: var(--accent-dark);
+        font-style: italic;
+        box-shadow: inset 0 0 0 1px rgba(183, 110, 60, 0.08);
+      }
+
+      ul {
+        margin: 0 0 22px 20px;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      strong {
+        color: var(--accent-dark);
+      }
+
+      @media (max-width: 640px) {
+        .article-card {
+          padding: 32px 22px;
+          border-radius: 12px;
+        }
+
+        .meta {
+          font-size: 0.85rem;
+        }
+
+        .image-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <article class="article-card">
+        <p class="eyebrow">Júpiter</p>
+        <h1>Júpiter: o Gigante Gasoso do Sistema Solar</h1>
+
+        <div class="meta">
+          <span>Por: Equipe editorial</span>
+          <span>•</span>
+          <span>Atualizado recentemente</span>
+        </div>
+
+        <img
+          class="feature-image"
+          src="../imagem%20jupiter/PIA26444.jpg"
+          alt="Imagem de Júpiter, o maior planeta do Sistema Solar, mostrando suas listras características e a Grande Mancha Vermelha"
+        />
+
+        <p>
+          Júpiter é o maior planeta do Sistema Solar e um dos objetos mais fascinantes do espaço. Com uma atmosfera
+          enorme e movimentada, ele se destaca pela sua coloração em listras e pela presença de tempestades gigantes,
+          como a Grande Mancha Vermelha. Esse planeta não é apenas imponente: ele também influencia o equilíbrio do
+          sistema planetário e tem sido alvo de estudos por décadas.
+        </p>
+
+        <p>
+          Composto principalmente por hidrogênio e hélio, Júpiter se diferencia dos planetas rochosos por sua estrutura
+          gasosa e pela enorme massa. Seu diâmetro é cerca de 143 mil quilômetros, o que o torna mais de 11 vezes maior
+          que a Terra. Mesmo assim, apesar do tamanho colossal, a densidade do planeta é relativamente baixa em relação
+          aos mundos rochosos.
+        </p>
+
+        <div class="image-grid">
+          <figure class="image-card">
+            <img src="https://images-assets.nasa.gov/image/PIA02879/PIA02879~orig.jpg" alt="Júpiter em imagem da NASA" />
+            <figcaption>Júpiter em grande detalhe — NASA</figcaption>
+          </figure>
+          <figure class="image-card">
+            <img src="https://images-assets.nasa.gov/image/PIA00091/PIA00091~orig.jpg" alt="Atmosfera turbulenta de Júpiter" />
+            <figcaption>Atmosfera turbulenta de Júpiter</figcaption>
+          </figure>
+          <figure class="image-card">
+            <img src="https://images-assets.nasa.gov/image/PIA22923/PIA22923~orig.jpg" alt="Imagem de exploração de Júpiter pela NASA" />
+            <figcaption>Missões de exploração de Júpiter</figcaption>
+          </figure>
+        </div>
+
+        <h2>Características físicas</h2>
+
+        <p>
+          A aparência de Júpiter é marcada por faixas de nuvens em tons de branco, laranja e marrom, resultantes de
+          correntes atmosféricas em alta velocidade. O planeta gira rapidamente, completando uma rotação em pouco mais de
+          9 horas e 56 minutos. Esse movimento gera fortes ventos e contribui para a formação de padrões climáticos muito
+          dinâmicos.
+        </p>
+
+        <blockquote>
+          “Júpiter é um gigante em todos os sentidos: tamanho, gravidade, tempestades e mistério.”
+        </blockquote>
+
+        <p>
+          Além disso, Júpiter possui um campo magnético extraordinariamente poderoso, muito maior do que o da Terra. Esse
+          campo cria cintilações e auroras na atmosfera do planeta e influencia o ambiente espacial ao seu redor. O estudo
+          dessa estrutura ajuda os cientistas a compreender melhor a dinâmica dos grandes planetas do Sistema Solar.
+        </p>
+
+        <h2>Exploração espacial</h2>
+
+        <p>
+          Júpiter tem sido objeto de estudo e exploração pelas agências espaciais há várias décadas. A sonda espacial
+          Voyager 1 fez uma passagem próxima por Júpiter em 1979, fornecendo as primeiras imagens detalhadas do planeta e
+          suas luas. Mais tarde, as missões Galileo, Juno e outras trouxeram dados cruciais sobre a estrutura interna de
+          Júpiter, seu campo magnético e suas tempestades.
+        </p>
+
+        <h2>Curiosidades e importância</h2>
+
+        <p>
+          Júpiter também atua como um verdadeiro “guardião” do sistema interno. Sua gravidade exerce forte influência sobre
+          asteroides e cometas, desviando alguns deles e reduzindo o risco de impactos mais frequentes na Terra. Por isso,
+          o planeta é essencial para a proteção e a estabilidade da região interior do sistema solar.
+        </p>
+
+        <ul>
+          <li>É o maior planeta do Sistema Solar.</li>
+          <li>Tem mais de 90 luas conhecidas.</li>
+          <li>Possui uma Grande Mancha Vermelha, uma tempestade gigante.</li>
+          <li>É composto principalmente por hidrogênio e hélio.</li>
+        </ul>
+
+        <p>
+          Em resumo, Júpiter é um mundo enorme, cheio de atmosferas, tempestades e fenômenos fascinantes. Seu estudo não
+          só amplia nosso conhecimento sobre planetas gigantes, mas também nos ajuda a entender melhor a origem e a evolução
+          do Sistema Solar como um todo.
+        </p>
+
+        <p>
+          <strong>Conclusão:</strong> Júpiter é verdadeiramente um colosso celestial que continua a intrigar os cientistas e
+          entusiastas do espaço. Sua massa, tamanho e complexidade atmosférica o tornam um laboratório natural para entender
+          a formação e a evolução de planetas gasosos. Além disso, suas luas e tempestades proporcionam uma visão
+          fascinante da dinâmica planetária e do potencial de mundos alienígenas. À medida que a exploração espacial continua
+          avançando, é provável que Júpiter ainda reserve muitas surpresas e segredos a serem revelados.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
