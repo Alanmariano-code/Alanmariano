@@ -38,31 +38,6 @@ Gosto de tecnologia, resolução de problemas e desenvolvimento de soluções qu
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
 </p>
 
-> Node.js, React, TypeScript, Express e bancos de dados representam tecnologias da minha trilha de aprendizado Full Stack.
-
-### Ferramentas
-<p>
-  <img src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Visual Studio Code" />
-</p>
-
-## 📂 Projetos e estudos
-
-Aqui compartilho meus exercícios, projetos pessoais e desafios desenvolvidos durante minha jornada de aprendizado.
-
-Cada projeto representa uma nova experiência e mais um passo na minha evolução como desenvolvedor.
-
-## 📊 Minha jornada no GitHub
-
-> Para exibir seus dados, substitua `SEU-USUARIO` nas imagens abaixo pelo seu nome de usuário do GitHub.
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=SEU-USUARIO&show_icons=true&theme=tokyonight&hide_border=true&locale=pt-br" alt="Estatísticas do GitHub de Alan" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SEU-USUARIO&layout=compact&theme=tokyonight&hide_border=true&locale=pt-br" alt="Linguagens mais usadas nos repositórios" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=SEU-USUARIO&theme=tokyo-night&hide_border=true&area=true" alt="Gráfico de atividade no GitHub" />
-</p>
 
 ## 📈 Minha filosofia
 
