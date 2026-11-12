@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela de Inscritos</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #f3f6fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 48px 24px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      color: #163b70;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgb(15 23 42 / 7%);
+    }
+
+    table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    caption {
+      padding: 16px 20px;
+      color: #334155;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border-top: 1px solid #e8edf4;
+      white-space: nowrap;
+    }
+
+    th {
+      background: #eaf1fb;
+      color: #163b70;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    tbody tr:hover {
+      background: #eef5ff;
+    }
+
+    td:first-child {
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 32px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tabela de Inscritos</h1>
+    <p class="subtitle">Confira os dados dos profissionais inscritos.</p>
+
+    <div class="table-container">
+      <table>
+        <caption>Dados dos inscritos</caption>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+            <th scope="col">Salário (R$)</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Telefone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>João da Silva</td>
+            <td>30</td>
+            <td>Engenheiro de Software</td>
+            <td>7000</td>
+            <td>joao.silva@email.com</td>
+            <td>(11) 98765-4321</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Maria Souza</td>
+            <td>25</td>
+            <td>Desenvolvedora Front-end Júnior</td>
+            <td>4500</td>
+            <td>maria.souza@email.com</td>
+            <td>(21) 99876-5432</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Pedro Oliveira</td>
+            <td>35</td>
+            <td>Desenvolvedor Full-Stack Júnior</td>
+            <td>5500</td>
+            <td>pedro.oliveira@email.com</td>
+            <td>(31) 98765-1234</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Ana Pereira</td>
+            <td>28</td>
+            <td>Cientista de Dados</td>
+            <td>6000</td>
+            <td>ana.pereira@email.com</td>
+            <td>(41) 99876-4321</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Lucas Santos</td>
+            <td>22</td>
+            <td>Estudante</td>
+            <td>-</td>
+            <td>lucas.santos@email.com</td>
+            <td>(51) 98765-5678</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Mariana Costa</td>
+            <td>29</td>
+            <td>Desenvolvedora Back-end</td>
+            <td>5500</td>
+            <td>mariana.costa@email.com</td>
+            <td>(61) 99876-8765</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
