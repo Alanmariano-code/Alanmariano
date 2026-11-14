@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Escritório de Contabilidade ABC: soluções contábeis, fiscais e financeiras para o crescimento da sua empresa.">
+  <title>Escritório ABC | Contabilidade para crescer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Escritório ABC, início">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>escritório<span class="brand-light">abc</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="primary-menu">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+        <a class="button button-small nav-cta" href="#contato">Fale com um contador <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Contabilidade próxima, resultados reais</span>
+          <h1>Seu negócio cresce.<br><span>A gente cuida</span><br>dos números.</h1>
+          <p>Há mais de 20 anos, transformamos a contabilidade em uma parceria para decisões mais seguras e um crescimento sustentável.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contato">Vamos conversar <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#servicos">Conheça nossos serviços <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span><span>+</span></div>
+            <p><strong>Atendimento de verdade</strong><br>com especialistas ao seu lado</p>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Gráfico ilustrando o crescimento de uma empresa">
+          <div class="visual-card">
+            <div class="chart-heading">
+              <div><span class="card-kicker">VISÃO DO SEU NEGÓCIO</span><h2>Crescer com clareza</h2></div>
+              <span class="chart-menu" aria-hidden="true">•••</span>
+            </div>
+            <div class="chart-summary"><strong>+28,4%</strong><span>crescimento acompanhado</span><span class="trend">↗</span></div>
+            <div class="chart" aria-hidden="true">
+              <div class="chart-y-labels"><span>40</span><span>30</span><span>20</span><span>10</span></div>
+              <svg viewBox="0 0 420 180" role="img" aria-label="Gráfico de crescimento ascendente">
+                <defs>
+                  <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#75c7a6" stop-opacity=".3"/>
+                    <stop offset="100%" stop-color="#75c7a6" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path class="chart-area" d="M0 148 C35 136 40 122 73 127 S124 116 145 100 S184 111 214 85 S262 91 286 66 S333 72 355 44 S399 41 420 17 V180 H0Z"/>
+                <path class="chart-line" d="M0 148 C35 136 40 122 73 127 S124 116 145 100 S184 111 214 85 S262 91 286 66 S333 72 355 44 S399 41 420 17"/>
+                <circle cx="420" cy="17" r="5" class="chart-point"/>
+              </svg>
+            </div>
+            <div class="chart-months"><span>Jan</span><span>Mar</span><span>Mai</span><span>Jul</span><span>Set</span><span>Nov</span></div>
+            <div class="chart-footer"><span><i></i> Evolução acompanhada de perto</span><span>2025</span></div>
+          </div>
+          <div class="floating-note"><span class="note-icon">✓</span><span><strong>Tudo em dia</strong><br>Você fica tranquilo.</span></div>
+          <div class="visual-decoration" aria-hidden="true">✳</div>
+        </div>
+      </div>
+      <div class="hero-bottom container">
+        <span>CONTABILIDADE COMPLETA PARA</span>
+        <div><span>Pequenas empresas</span><span>Negócios em expansão</span><span>Profissionais e serviços</span></div>
+      </div>
+    </section>
+
+    <section class="intro section-pad" id="sobre">
+      <div class="container intro-grid">
+        <div class="section-label"><span>01 / SOBRE NÓS</span><div class="label-line"></div><span>PARCEIROS DO SEU NEGÓCIO</span></div>
+        <div class="intro-content">
+          <h2>Contabilidade boa é aquela que <span>ajuda você a ir mais longe.</span></h2>
+          <p class="intro-lead">O Escritório de Contabilidade ABC nasceu em 2005 com um propósito: simplificar a vida de quem empreende.</p>
+          <p>Somos uma equipe experiente e sempre atualizada, pronta para entender a realidade da sua empresa. Mais do que cuidar de obrigações, entregamos informações claras para você tomar decisões estratégicas com confiança.</p>
+          <a class="text-link dark-link" href="#contato">Conheça nosso jeito de trabalhar <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon" aria-hidden="true">✳</div>
+          <span class="card-kicker">O QUE NOS MOVE</span>
+          <h3>Crescimento sustentável começa com escolhas bem informadas.</h3>
+          <div class="mission-divider"></div>
+          <div class="mission-stats">
+            <div><strong>2005</strong><span>desde então ao seu lado</span></div>
+            <div><strong>100%</strong><span>compromisso com você</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="container values-row">
+        <div><span class="value-number">01</span><div><h3>Ética e transparência</h3><p>Relações de confiança, sempre.</p></div></div>
+        <div><span class="value-number">02</span><div><h3>Excelência no cuidado</h3><p>Atendimento próximo e dedicado.</p></div></div>
+        <div><span class="value-number">03</span><div><h3>Atualização constante</h3><p>Inovação a favor do seu negócio.</p></div></div>
+      </div>
+    </section>
+
+    <section class="services section-pad" id="servicos">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="section-label light-label"><span>02 / COMO PODEMOS AJUDAR</span></div><h2>O suporte certo para<br><span>cada etapa da sua empresa.</span></h2></div>
+          <p>Da rotina contábil ao planejamento, cuidamos dos detalhes para você focar no que faz seu negócio acontecer.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">▤</span><span class="service-index">01</span>
+            <h3>Contabilidade empresarial</h3><p>Escrituração, análise de balanços e relatórios gerenciais para entender a saúde da sua empresa.</p>
+            <a href="#contato" aria-label="Saiba mais sobre contabilidade empresarial">↗</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">％</span><span class="service-index">02</span>
+            <h3>Imposto de renda</h3><p>Elaboração e entrega de declarações de IRPF e IRPJ com atenção a cada detalhe.</p>
+            <a href="#contato" aria-label="Saiba mais sobre imposto de renda">↗</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">⌕</span><span class="service-index">03</span>
+            <h3>Auditoria contábil</h3><p>Verificação dos registros para mais precisão, segurança e conformidade.</p>
+            <a href="#contato" aria-label="Saiba mais sobre auditoria contábil">↗</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">↗</span><span class="service-index">04</span>
+            <h3>Consultoria financeira</h3><p>Análises e orientações para decisões estratégicas e crescimento saudável.</p>
+            <a href="#contato" aria-label="Saiba mais sobre consultoria financeira">↗</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">◎</span><span class="service-index">05</span>
+            <h3>Assessoria fiscal</h3><p>Obrigações fiscais em dia e orientação para uma gestão tributária eficiente.</p>
+            <a href="#contato" aria-label="Saiba mais sobre assessoria fiscal">↗</a>
+          </article>
+          <article class="service-card service-cta-card">
+            <span class="service-icon" aria-hidden="true">✳</span>
+            <h3>Precisa de algo diferente?</h3><p>Conte para a gente. Vamos encontrar a solução certa para o seu momento.</p>
+            <a class="service-cta-link" href="#contato">Fale com nossa equipe <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <div class="section-label"><span>03 / VAMOS CONVERSAR</span></div>
+          <h2>Seu próximo passo começa com <span>uma boa conversa.</span></h2>
+          <p>Quer saber como podemos ajudar? Entre em contato ou agende uma reunião. Estamos prontos para ouvir você.</p>
+          <div class="contact-details">
+            <a href="mailto:contato@escritorioabc.com"><span class="detail-icon" aria-hidden="true">✉</span><span><small>MANDE UM E-MAIL</small>contato@escritorioabc.com</span></a>
+            <a href="tel:+551112345678"><span class="detail-icon" aria-hidden="true">⌕</span><span><small>LIGUE PARA NÓS</small>(11) 1234-5678</span></a>
+            <div><span class="detail-icon" aria-hidden="true">⌖</span><span><small>ONDE ESTAMOS</small>Rua das Flores, 123 — São Paulo/SP</span></div>
+          </div>
+          <p class="business-hours"><strong>Horário de atendimento</strong><br>Segunda a sexta-feira, das 8h às 18h.</p>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <span class="form-kicker">FALE COM A NOSSA EQUIPE</span>
+          <h3>Como podemos ajudar?</h3>
+          <label for="name">Seu nome</label>
+          <input id="name" name="name" type="text" placeholder="Como podemos chamar você?" required>
+          <label for="email">Seu e-mail</label>
+          <input id="email" name="email" type="email" placeholder="voce@empresa.com.br" required>
+          <label for="service">Qual serviço você procura?</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Selecione uma opção</option>
+            <option>Contabilidade empresarial</option>
+            <option>Imposto de renda</option>
+            <option>Auditoria contábil</option>
+            <option>Consultoria financeira</option>
+            <option>Assessoria fiscal</option>
+            <option>Outro assunto</option>
+          </select>
+          <label for="message">Sua mensagem</label>
+          <textarea id="message" name="message" rows="3" placeholder="Conte um pouquinho sobre o que precisa..." required></textarea>
+          <button class="button form-submit" type="submit">Enviar mensagem <span aria-hidden="true">→</span></button>
+          <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+          <small class="form-note">Ao enviar, seu aplicativo de e-mail será aberto com a mensagem pronta.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">A</span><span>escritório<span class="brand-light">abc</span></span></a>
+      <p>Contabilidade próxima para negócios que querem ir mais longe.</p>
+      <a class="footer-top" href="#inicio">Voltar ao início ↑</a>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2025</span> Escritório de Contabilidade ABC. Todos os direitos reservados.</span><span>Feito com cuidado em São Paulo.</span></div>
+  </footer>
+</body>
+</html>
