@@ -1,0 +1,288 @@
+/* Design tokens */
+:root {
+    color-scheme: light;
+    --color-ocean-950: #082b36;
+    --color-ocean-800: #0c5261;
+    --color-ocean-600: #127c83;
+    --color-tropical: #36a887;
+    --color-white: #fff;
+    --color-ink: #14333b;
+    --color-muted: #527078;
+    --surface-glass: rgba(248, 253, 251, 0.88);
+    --surface-border: rgba(255, 255, 255, 0.72);
+    --shadow-soft: 0 18px 50px rgba(3, 29, 38, 0.2);
+    --radius-card: 22px;
+}
+
+/* Base and scenic background */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100svh;
+    flex-direction: column;
+    margin: 0;
+    padding: clamp(24px, 5vw, 64px) 20px 20px;
+    color: var(--color-ink);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--color-ocean-800);
+    background-image:
+        linear-gradient(135deg, rgba(4, 33, 45, 0.62), rgba(7, 67, 69, 0.42)),
+        url("https://www.viagenspossiveis.com.br/wp-content/uploads/2013/02/C360_2012-11-19-17-59-02.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+/* Shared content width */
+header,
+main,
+footer {
+    width: min(100%, 1080px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Header */
+header {
+    margin-bottom: clamp(28px, 5vw, 48px);
+    padding: clamp(28px, 5vw, 52px) 24px;
+    color: var(--color-white);
+    text-align: center;
+    background: linear-gradient(135deg, rgba(8, 52, 65, 0.78), rgba(17, 108, 104, 0.58));
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    border-radius: 28px;
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+header h1 {
+    max-width: 780px;
+    margin: 0 auto 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.15rem, 5vw, 4rem);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    line-height: 1.12;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.7;
+}
+
+/* Main cards */
+main {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(18px, 3vw, 28px);
+}
+
+section {
+    min-width: 0;
+    padding: clamp(24px, 4vw, 38px);
+    background: var(--surface-glass);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+section h2 {
+    margin-bottom: 14px;
+    color: var(--color-ocean-800);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+section p {
+    margin-bottom: 24px;
+    color: var(--color-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/* Links and buttons */
+a,
+button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    color: var(--color-white);
+    font: inherit;
+    font-weight: 650;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--color-ocean-600), var(--color-tropical));
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(12, 82, 97, 0.2);
+    cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+a:hover,
+button:hover {
+    filter: brightness(1.06);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(12, 82, 97, 0.27);
+}
+
+a:active,
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 12px rgba(12, 82, 97, 0.2);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #35a887;
+    outline-offset: 3px;
+}
+
+/* Contact form */
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    margin-top: 2px;
+    color: var(--color-ocean-950);
+    font-size: 0.92rem;
+    font-weight: 650;
+}
+
+input {
+    width: 100%;
+    min-height: 48px;
+    margin-bottom: 8px;
+    padding: 12px 14px;
+    color: var(--color-ink);
+    font: inherit;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(12, 82, 97, 0.22);
+    border-radius: 12px;
+    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+input::placeholder {
+    color: #748a8e;
+}
+
+input:focus {
+    background-color: var(--color-white);
+    border-color: var(--color-ocean-600);
+    box-shadow: 0 0 0 4px rgba(18, 124, 131, 0.13);
+}
+
+form button {
+    justify-self: start;
+    margin-top: 4px;
+}
+
+/* Footer */
+footer {
+    margin-top: clamp(24px, 4vw, 40px);
+    padding: 18px 20px;
+    color: rgba(255, 255, 255, 0.86);
+    text-align: center;
+    background: rgba(5, 39, 49, 0.48);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+/* Tablet */
+@media (max-width: 760px) {
+    body {
+        padding-top: 28px;
+        background-attachment: scroll;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+    }
+
+    header,
+    footer {
+        max-width: 760px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 18px 14px 14px;
+    }
+
+    header {
+        margin-bottom: 20px;
+        padding: 30px 20px;
+        border-radius: 22px;
+    }
+
+    main {
+        gap: 16px;
+    }
+
+    section {
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+
+    section p {
+        margin-bottom: 20px;
+    }
+
+    a,
+    form button {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 20px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
