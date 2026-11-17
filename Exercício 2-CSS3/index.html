@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="Painel interativo para selecionar, ocultar e organizar cards.">
+  <title>Canvas — Card Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#" aria-label="Canvas, início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M5 8.5 16 3l11 5.5v15L16 29 5 23.5v-15Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="m5.5 8.5 10.5 5.2 10.5-5.2M16 14v14" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span>canvas<span class="brand-period">.</span></span>
+      </a>
+
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="main-nav">
+        <a class="nav-item" href="#overview">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+          <span>Visão geral</span>
+        </a>
+        <a class="nav-item active" href="#cards" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 9v11"/></svg>
+          <span>Meus cards</span>
+          <span class="nav-count">06</span>
+        </a>
+        <a class="nav-item" href="#collections">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H20v14H5.5A1.5 1.5 0 0 0 4 19.5v-14Z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 18H20M8 8h8M8 11h6"/></svg>
+          <span>Coleções</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="tip-card">
+          <span class="tip-icon" aria-hidden="true">✦</span>
+          <p class="tip-title">Um espaço, suas ideias.</p>
+          <p class="tip-copy">Organize o que importa do seu jeito.</p>
+        </div>
+        <a class="profile-link" href="#profile">
+          <span class="avatar avatar-profile">MC</span>
+          <span class="profile-copy"><strong>Marina Costa</strong><small>Plano gratuito</small></span>
+          <svg class="profile-menu-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content" id="cards">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Workspace</span><span class="breadcrumb-slash">/</span><strong>Meus cards</strong></div>
+        <div class="topbar-actions">
+          <button class="icon-button notification-button" type="button" aria-label="Notificações">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+            <span class="notification-dot"></span>
+          </button>
+          <span class="topbar-divider"></span>
+          <span class="avatar avatar-small">MC</span>
+        </div>
+      </header>
+
+      <section class="page-content" aria-labelledby="page-title">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> SEU ESPAÇO CRIATIVO</p>
+            <h1 id="page-title">Meus cards<span class="title-period">.</span></h1>
+            <p class="page-description">Uma coleção de ideias, projetos e inspirações.</p>
+          </div>
+          <button class="create-button" type="button" id="create-card-button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            <span>Novo card</span>
+          </button>
+        </div>
+
+        <div class="toolbar" aria-label="Controles dos cards">
+          <div class="toolbar-left">
+            <div class="view-label">
+              <span class="view-indicator" aria-hidden="true"></span>
+              <span>Todos os cards</span>
+              <span class="total-count" id="total-count">06</span>
+            </div>
+            <span class="toolbar-divider"></span>
+            <span class="selection-status" id="selection-status" aria-live="polite">Selecione um card para começar</span>
+          </div>
+          <div class="toolbar-actions">
+            <button class="toolbar-button" id="clear-selection" type="button" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+              <span>Limpar seleção</span>
+            </button>
+            <button class="toolbar-button" id="hide-selected" type="button" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12s3.2-6 9-6 9 6 9 6-3.2 6-9 6-9-6-9-6Z"/><circle cx="12" cy="12" r="2.5"/><path d="m4 4 16 16"/></svg>
+              <span>Ocultar selecionado</span>
+            </button>
+            <button class="toolbar-button show-button" id="show-hidden" type="button" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12s3.2-6 9-6 9 6 9 6-3.2 6-9 6-9-6-9-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+              <span>Mostrar ocultos</span>
+              <span class="hidden-count" id="hidden-count">0</span>
+            </button>
+          </div>
+        </div>
+
+        <section class="card-grid" id="card-grid" aria-label="Seus cards">
+          <article class="content-card card-violet" tabindex="0" aria-pressed="false" aria-label="Projeto Aurora, card de projeto">
+            <div class="card-art aurora-art" aria-hidden="true">
+              <span class="art-orbit orbit-one"></span><span class="art-orbit orbit-two"></span>
+              <span class="art-sun"></span><span class="art-hill hill-one"></span><span class="art-hill hill-two"></span>
+              <span class="art-label">A<span>°</span></span>
+              <span class="art-caption">a new perspective</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span class="category category-violet">PROJETO</span><button class="card-menu" type="button" aria-label="Ocultar Projeto Aurora" data-action="hide"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button></div>
+              <h2>Projeto Aurora</h2>
+              <p class="card-description">Identidade visual para uma nova forma de ver o mundo.</p>
+              <div class="card-footer"><span class="card-date"><span class="date-dot"></span> Atualizado há 2h</span><span class="avatar avatar-lilac">AL</span></div>
+            </div>
+          </article>
+
+          <article class="content-card card-orange" tabindex="0" aria-pressed="false" aria-label="Receitas de domingo, card de coleção">
+            <div class="card-art recipes-art" aria-hidden="true">
+              <span class="recipe-paper paper-back"></span><span class="recipe-paper paper-front"></span>
+              <span class="recipe-sun"></span><span class="recipe-leaf leaf-one"></span><span class="recipe-leaf leaf-two"></span>
+              <span class="recipe-title">feito<br>com amor</span><span class="recipe-stamp">nº 08</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span class="category category-orange">COLEÇÃO</span><button class="card-menu" type="button" aria-label="Ocultar Receitas de domingo" data-action="hide"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button></div>
+              <h2>Receitas de domingo</h2>
+              <p class="card-description">Sabores de casa para compartilhar sem pressa.</p>
+              <div class="card-footer"><span class="card-date"><span class="date-dot"></span> Atualizado ontem</span><span class="avatar avatar-peach">MC</span></div>
+            </div>
+          </article>
+
+          <article class="content-card card-blue" tabindex="0" aria-pressed="false" aria-label="Moodboard de verão, card de inspiração">
+            <div class="card-art summer-art" aria-hidden="true">
+              <span class="summer-sun"></span><span class="summer-circle"></span>
+              <span class="summer-wave wave-one"></span><span class="summer-wave wave-two"></span>
+              <span class="summer-type">slow<br>summer</span><span class="summer-star star-one">✳</span><span class="summer-star star-two">✳</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span class="category category-blue">INSPIRAÇÃO</span><button class="card-menu" type="button" aria-label="Ocultar Moodboard de verão" data-action="hide"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button></div>
+              <h2>Moodboard de verão</h2>
+              <p class="card-description">Luz dourada, dias longos e uma paleta solar.</p>
+              <div class="card-footer"><span class="card-date"><span class="date-dot"></span> Atualizado há 3 dias</span><span class="avatar avatar-sky">JP</span></div>
+            </div>
+          </article>
+
+          <article class="content-card card-green" tabindex="0" aria-pressed="false" aria-label="Horta na varanda, card de projeto">
+            <div class="card-art garden-art" aria-hidden="true">
+              <span class="garden-pot pot-one"></span><span class="garden-pot pot-two"></span>
+              <span class="garden-stem stem-one"></span><span class="garden-stem stem-two"></span><span class="garden-stem stem-three"></span>
+              <span class="garden-leaf g-leaf-one"></span><span class="garden-leaf g-leaf-two"></span><span class="garden-leaf g-leaf-three"></span><span class="garden-leaf g-leaf-four"></span>
+              <span class="garden-copy">grow<br>something good</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span class="category category-green">PROJETO</span><button class="card-menu" type="button" aria-label="Ocultar Horta na varanda" data-action="hide"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button></div>
+              <h2>Horta na varanda</h2>
+              <p class="card-description">Pequenos cultivos, grandes alegrias todos os dias.</p>
+              <div class="card-footer"><span class="card-date"><span class="date-dot"></span> Atualizado há 5 dias</span><span class="avatar avatar-mint">MC</span></div>
+            </div>
+          </article>
+
+          <article class="content-card card-pink" tabindex="0" aria-pressed="false" aria-label="Leituras para levar, card de lista">
+            <div class="card-art reading-art" aria-hidden="true">
+              <span class="book book-back"></span><span class="book book-middle"></span><span class="book book-front"></span>
+              <span class="reading-spark spark-one">✳</span><span class="reading-spark spark-two">✦</span>
+              <span class="reading-script">mais<br>uma página</span>
+              <span class="reading-note">LISTA DE LEITURA</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span class="category category-pink">LISTA</span><button class="card-menu" type="button" aria-label="Ocultar Leituras para levar" data-action="hide"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button></div>
+              <h2>Leituras para levar</h2>
+              <p class="card-description">Histórias que fazem companhia em qualquer lugar.</p>
+              <div class="card-footer"><span class="card-date"><span class="date-dot"></span> Atualizado há 1 semana</span><span class="avatar avatar-rose">AL</span></div>
+            </div>
+          </article>
+
+          <article class="content-card card-yellow" tabindex="0" aria-pressed="false" aria-label="Ideias em movimento, card de anotações">
+            <div class="card-art notes-art" aria-hidden="true">
+              <span class="note note-one"><i></i><i></i><i></i></span>
+              <span class="note note-two"><i></i><i></i><i></i></span>
+              <span class="note note-three"><i></i><i></i><i></i></span>
+              <span class="notes-scribble">anote<br>e invente</span><span class="notes-spark">✳</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span class="category category-yellow">ANOTAÇÕES</span><button class="card-menu" type="button" aria-label="Ocultar Ideias em movimento" data-action="hide"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button></div>
+              <h2>Ideias em movimento</h2>
+              <p class="card-description">Pensamentos soltos esperando o próximo passo.</p>
+              <div class="card-footer"><span class="card-date"><span class="date-dot"></span> Atualizado há 2 semanas</span><span class="avatar avatar-gold">JP</span></div>
+            </div>
+          </article>
+        </section>
+
+        <div class="empty-state hidden" id="empty-state" aria-live="polite">
+          <span class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><rect x="7" y="9" width="34" height="30" rx="5"/><path d="M7 18h34M16 18v21"/></svg>
+          </span>
+          <h2>Nenhum card por aqui</h2>
+          <p>Mostre os cards ocultos ou crie um novo para continuar.</p>
+          <button class="empty-show-button" id="empty-show-hidden" type="button">Mostrar cards ocultos</button>
+        </div>
+
+        <footer class="page-footer"><span>Feito para suas ideias florescerem.</span><span>CANVAS STUDIO <span class="footer-spark">✳</span></span></footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
