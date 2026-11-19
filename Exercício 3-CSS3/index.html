@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta
+    name="description"
+    content="Descubra seu próximo livro favorito na BOOKSHELF. Uma livraria digital feita para quem ama boas histórias."
+  >
+  <title>BOOKSHELF — histórias que ficam com você</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    referrerpolicy="no-referrer"
+  >
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#inicio" aria-label="BOOKSHELF — página inicial">
+        <span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+        <span>BOOK<span class="brand-accent">SHELF</span></span>
+      </a>
+
+      <button
+        class="menu-toggle icon-button"
+        id="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+
+      <form class="header-search" id="search-form" role="search">
+        <label class="sr-only" for="book-search">Pesquisar livros ou autores</label>
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="book-search" name="q" type="search" placeholder="Buscar livros..." autocomplete="off">
+        <button class="sr-only" type="submit">Buscar</button>
+      </form>
+
+      <div class="header-actions">
+        <button class="login-button" id="login-open" type="button">Entrar</button>
+        <button class="cart-button icon-button" id="cart-open" type="button" aria-label="Abrir carrinho, 0 itens">
+          <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section-spacing" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> UM MUNDO INTEIRO EM CADA PÁGINA</span>
+          <h1 id="hero-title">Sua próxima grande história <span>começa aqui.</span></h1>
+          <p>Encontre livros que despertam ideias, criam conexões e acompanham cada novo capítulo da sua vida.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalogo">
+              Explorar catálogo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a class="button button-quiet" href="#sobre">
+              <i class="fa-regular fa-circle-play" aria-hidden="true"></i> Conheça nossa coleção
+            </a>
+          </div>
+          <div class="reader-note">
+            <div class="reader-avatars" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=80&amp;h=80&amp;q=80" alt="">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=80&amp;h=80&amp;q=80" alt="">
+              <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=crop&amp;w=80&amp;h=80&amp;q=80" alt="">
+            </div>
+            <p><strong>12 mil+</strong> leitores encontraram sua próxima paixão</p>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img
+              class="hero-image"
+              src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"
+              alt="Livros cuidadosamente empilhados em uma mesa aconchegante"
+              fetchpriority="high"
+            >
+          </div>
+          <div class="hero-float-card">
+            <span class="float-icon" aria-hidden="true"><i class="fa-solid fa-bookmark"></i></span>
+            <span><strong>Leituras escolhidas</strong><small>com carinho para você</small></span>
+          </div>
+          <div class="hero-side-note"><span>01 — 06</span><span class="side-line"></span><span>LEIA SEM PRESSA</span></div>
+          <div class="hero-orbit" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="container hero-footnote">
+        <span>Histórias para todos os momentos.</span>
+        <span class="hero-footnote-right"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> DESCUBRA</span>
+      </div>
+    </section>
+
+    <section class="categories-section section-spacing" id="categorias" aria-labelledby="categories-title">
+      <div class="container">
+        <div class="section-heading category-heading">
+          <div>
+            <span class="eyebrow">ENCONTRE SEU PRÓXIMO UNIVERSO</span>
+            <h2 id="categories-title">O que você quer <span>ler hoje?</span></h2>
+          </div>
+          <a class="text-link" href="#catalogo">Ver todos os livros <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="category-grid">
+          <button class="category-card" type="button" data-category="romance">
+            <span class="category-icon category-pink"><i class="fa-solid fa-heart" aria-hidden="true"></i></span>
+            <span class="category-name">Romance</span>
+            <i class="fa-solid fa-arrow-up-right-from-square category-arrow" aria-hidden="true"></i>
+          </button>
+          <button class="category-card" type="button" data-category="ficcao-cientifica">
+            <span class="category-icon category-blue"><i class="fa-solid fa-meteor" aria-hidden="true"></i></span>
+            <span class="category-name">Ficção científica</span>
+            <i class="fa-solid fa-arrow-up-right-from-square category-arrow" aria-hidden="true"></i>
+          </button>
+          <button class="category-card" type="button" data-category="misterio">
+            <span class="category-icon category-yellow"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
+            <span class="category-name">Mistério</span>
+            <i class="fa-solid fa-arrow-up-right-from-square category-arrow" aria-hidden="true"></i>
+          </button>
+          <button class="category-card" type="button" data-category="fantasia">
+            <span class="category-icon category-purple"><i class="fa-solid fa-wand-sparkles" aria-hidden="true"></i></span>
+            <span class="category-name">Fantasia</span>
+            <i class="fa-solid fa-arrow-up-right-from-square category-arrow" aria-hidden="true"></i>
+          </button>
+          <button class="category-card" type="button" data-category="suspense">
+            <span class="category-icon category-green"><i class="fa-solid fa-eye" aria-hidden="true"></i></span>
+            <span class="category-name">Suspense</span>
+            <i class="fa-solid fa-arrow-up-right-from-square category-arrow" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section section-spacing" id="catalogo" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="section-heading catalog-heading">
+          <div>
+            <span class="eyebrow">ESCOLHIDOS A DEDO, PENSADOS PARA VOCÊ</span>
+            <h2 id="catalog-title">Favoritos dos <span>leitores</span></h2>
+          </div>
+          <div class="catalog-filters" aria-label="Filtrar livros por categoria">
+            <button class="filter-chip is-active" type="button" data-category="todos" aria-pressed="true">Todos</button>
+            <button class="filter-chip" type="button" data-category="romance" aria-pressed="false">Romance</button>
+            <button class="filter-chip" type="button" data-category="fantasia" aria-pressed="false">Fantasia</button>
+            <button class="filter-chip" type="button" data-category="ficcao-cientifica" aria-pressed="false">Ficção</button>
+          </div>
+        </div>
+        <p class="catalog-status sr-only" id="catalog-status" aria-live="polite"></p>
+
+        <div class="book-grid" id="book-grid">
+          <article class="book-card" data-id="vidas-extraordinarias" data-category="romance" data-title="Vidas extraordinárias" data-author="Clara Monteiro" data-price="42.90" data-price-cents="4290">
+            <div class="book-cover cover-rose">
+              <span class="book-badge">MAIS VENDIDO</span>
+              <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&amp;fit=crop&amp;w=500&amp;h=650&amp;q=80" alt="Livros em uma estante, fotografia da capa de Vidas extraordinárias" loading="lazy">
+              <div class="cover-caption"><span>CLARA MONTEIRO</span><strong>Vidas<br>extraordinárias</strong></div>
+              <button class="cover-action" type="button" aria-label="Adicionar Vidas extraordinárias ao carrinho" data-add-to-cart><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <div class="book-meta"><div><h3>Vidas extraordinárias</h3><p>Clara Monteiro</p></div><span class="book-price">R$ 42,90</span></div>
+            <div class="book-rating" aria-label="Avaliação: 4,9 de 5"><span aria-hidden="true">★★★★★</span><span class="rating-value">4.9</span><span class="rating-count">(128)</span></div>
+          </article>
+
+          <article class="book-card" data-id="atlas-do-amanha" data-category="ficcao-cientifica" data-title="O atlas do amanhã" data-author="Rafael Nogueira" data-price="54.90" data-price-cents="5490">
+            <div class="book-cover cover-blue">
+              <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&amp;fit=crop&amp;w=500&amp;h=650&amp;q=80" alt="Livros antigos empilhados, fotografia da capa de O atlas do amanhã" loading="lazy">
+              <div class="cover-caption"><span>RAFAEL NOGUEIRA</span><strong>O atlas<br>do amanhã</strong></div>
+              <button class="cover-action" type="button" aria-label="Adicionar O atlas do amanhã ao carrinho" data-add-to-cart><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <div class="book-meta"><div><h3>O atlas do amanhã</h3><p>Rafael Nogueira</p></div><span class="book-price">R$ 54,90</span></div>
+            <div class="book-rating" aria-label="Avaliação: 4,8 de 5"><span aria-hidden="true">★★★★★</span><span class="rating-value">4.8</span><span class="rating-count">(96)</span></div>
+          </article>
+
+          <article class="book-card" data-id="casa-entre-paginas" data-category="fantasia" data-title="A casa entre páginas" data-author="Lívia Azevedo" data-price="47.90" data-price-cents="4790">
+            <div class="book-cover cover-lilac">
+              <span class="book-badge badge-lilac">NOVIDADE</span>
+              <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&amp;fit=crop&amp;w=500&amp;h=650&amp;q=80" alt="Estante com livros de diferentes cores, fotografia da capa de A casa entre páginas" loading="lazy">
+              <div class="cover-caption"><span>LÍVIA AZEVEDO</span><strong>A casa<br>entre páginas</strong></div>
+              <button class="cover-action" type="button" aria-label="Adicionar A casa entre páginas ao carrinho" data-add-to-cart><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <div class="book-meta"><div><h3>A casa entre páginas</h3><p>Lívia Azevedo</p></div><span class="book-price">R$ 47,90</span></div>
+            <div class="book-rating" aria-label="Avaliação: 5 de 5"><span aria-hidden="true">★★★★★</span><span class="rating-value">5.0</span><span class="rating-count">(74)</span></div>
+          </article>
+
+          <article class="book-card" data-id="segredo-da-rua-azul" data-category="misterio" data-title="O segredo da rua azul" data-author="Marina Prado" data-price="39.90" data-price-cents="3990">
+            <div class="book-cover cover-olive">
+              <img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&amp;fit=crop&amp;w=500&amp;h=650&amp;q=80" alt="Leitor explorando uma estante de livros, fotografia da capa de O segredo da rua azul" loading="lazy">
+              <div class="cover-caption"><span>MARINA PRADO</span><strong>O segredo<br>da rua azul</strong></div>
+              <button class="cover-action" type="button" aria-label="Adicionar O segredo da rua azul ao carrinho" data-add-to-cart><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <div class="book-meta"><div><h3>O segredo da rua azul</h3><p>Marina Prado</p></div><span class="book-price">R$ 39,90</span></div>
+            <div class="book-rating" aria-label="Avaliação: 4,7 de 5"><span aria-hidden="true">★★★★★</span><span class="rating-value">4.7</span><span class="rating-count">(83)</span></div>
+          </article>
+
+          <article class="book-card" data-id="onde-o-mar-dorme" data-category="romance" data-title="Onde o mar dorme" data-author="Isabela Martins" data-price="44.90" data-price-cents="4490">
+            <div class="book-cover cover-coral">
+              <span class="book-badge">QUERIDINHO</span>
+              <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&amp;fit=crop&amp;w=500&amp;h=650&amp;q=80" alt="Prateleira de uma biblioteca iluminada, fotografia da capa de Onde o mar dorme" loading="lazy">
+              <div class="cover-caption"><span>ISABELA MARTINS</span><strong>Onde o<br>mar dorme</strong></div>
+              <button class="cover-action" type="button" aria-label="Adicionar Onde o mar dorme ao carrinho" data-add-to-cart><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <div class="book-meta"><div><h3>Onde o mar dorme</h3><p>Isabela Martins</p></div><span class="book-price">R$ 44,90</span></div>
+            <div class="book-rating" aria-label="Avaliação: 4,9 de 5"><span aria-hidden="true">★★★★★</span><span class="rating-value">4.9</span><span class="rating-count">(112)</span></div>
+          </article>
+
+          <article class="book-card" data-id="ultima-luz" data-category="suspense" data-title="A última luz" data-author="Pedro Vasconcelos" data-price="49.90" data-price-cents="4990">
+            <div class="book-cover cover-midnight">
+              <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=500&amp;h=650&amp;q=80" alt="Interior de uma biblioteca de madeira, fotografia da capa de A última luz" loading="lazy">
+              <div class="cover-caption"><span>PEDRO VASCONCELOS</span><strong>A última<br>luz</strong></div>
+              <button class="cover-action" type="button" aria-label="Adicionar A última luz ao carrinho" data-add-to-cart><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <div class="book-meta"><div><h3>A última luz</h3><p>Pedro Vasconcelos</p></div><span class="book-price">R$ 49,90</span></div>
+            <div class="book-rating" aria-label="Avaliação: 4,8 de 5"><span aria-hidden="true">★★★★★</span><span class="rating-value">4.8</span><span class="rating-count">(67)</span></div>
+          </article>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>Nenhum livro encontrado. Experimente outra busca ou categoria.</p>
+        <div class="catalog-bottom"><a class="button button-outline" href="#catalogo" id="show-all-books">Explorar todo o catálogo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+      </div>
+    </section>
+
+    <section class="promotion-section" aria-labelledby="promotion-title">
+      <div class="container">
+        <div class="promotion-banner">
+          <div class="promotion-copy">
+            <span class="eyebrow eyebrow-light"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> UMA BOA HISTÓRIA TAMBÉM PODE SER UM BOM ACHADO</span>
+            <h2 id="promotion-title">Grandes histórias,<br><span>preços especiais.</span></h2>
+            <p>Um novo favorito espera por você. Aproveite condições especiais para renovar sua estante.</p>
+            <a class="button button-light" href="#catalogo" data-filter-sale>Conferir ofertas <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="promotion-art" aria-hidden="true">
+            <div class="promo-circle"></div>
+            <div class="promo-book promo-book-one"><span>BOOKSHELF<br>EDIÇÕES</span><strong>o poder<br>de recomeçar</strong></div>
+            <div class="promo-book promo-book-two"><span>UMA HISTÓRIA<br>INESQUECÍVEL</span><strong>Entre<br>mundos</strong></div>
+            <div class="promo-spark promo-spark-one">✳</div>
+            <div class="promo-spark promo-spark-two">✦</div>
+          </div>
+          <span class="promotion-tag">ATÉ 30% OFF</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-spacing" id="sobre" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div class="about-visual">
+          <img
+            src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&amp;fit=crop&amp;w=950&amp;q=85"
+            alt="Leitor aproveitando um momento tranquilo com um livro"
+            loading="lazy"
+          >
+          <span class="about-image-note"><i class="fa-solid fa-quote-left" aria-hidden="true"></i> Sempre existe uma história esperando por você.</span>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">MUITO ALÉM DE UMA LIVRARIA</span>
+          <h2 id="about-title">Livros aproximam.<br><span>Histórias transformam.</span></h2>
+          <p>A BOOKSHELF nasceu de um amor simples: encontrar aquela história que parece ter sido escrita especialmente para você.</p>
+          <p>Reunimos novas vozes, universos inesquecíveis e as escolhas de quem entende de boas leituras — tudo em um só lugar, para acompanhar o seu ritmo.</p>
+          <a class="text-link" href="#categorias">Descubra o que combina com você <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <div class="about-stats">
+            <div><strong>12 mil<span>+</span></strong><small>leitores felizes</small></div>
+            <div><strong>4,9<span>/5</span></strong><small>avaliação média</small></div>
+            <div><strong>1.200<span>+</span></strong><small>histórias para descobrir</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container newsletter-layout">
+        <div class="newsletter-copy">
+          <span class="newsletter-icon" aria-hidden="true"><i class="fa-regular fa-envelope"></i></span>
+          <div>
+            <span class="eyebrow">UMA CARTA PARA QUEM AMA LER</span>
+            <h2 id="newsletter-title">Receba histórias <span>incríveis.</span></h2>
+            <p>Novidades, dicas de leitura e surpresas direto na sua caixa de entrada.</p>
+          </div>
+        </div>
+        <form class="newsletter-form" id="newsletter-form">
+          <label class="sr-only" for="newsletter-email">Seu melhor e-mail</label>
+          <input id="newsletter-email" name="email" type="email" placeholder="Seu melhor e-mail" autocomplete="email" required>
+          <button class="button button-primary" type="submit">Quero receber <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          <p class="newsletter-message" id="newsletter-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="#inicio">
+            <span class="brand-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+            <span>BOOK<span class="brand-accent">SHELF</span></span>
+          </a>
+          <p>Boas histórias fazem bons encontros.<br>Encontre o seu próximo por aqui.</p>
+          <div class="social-links" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.pinterest.com/" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer-column"><h2>Descubra</h2><a href="#catalogo">Catálogo completo</a><a href="#categorias">Categorias</a><a href="#catalogo">Mais vendidos</a><a href="#catalogo">Novidades</a></div>
+        <div class="footer-column"><h2>Sobre a loja</h2><a href="#sobre">Nossa história</a><a href="#newsletter">Contato</a><a href="#newsletter">Perguntas frequentes</a><a href="#newsletter">Envios e trocas</a></div>
+        <div class="footer-column footer-contact"><h2>Uma ajudinha?</h2><p>Estamos por aqui para ajudar você a encontrar a próxima boa história.</p><a href="mailto:oi@bookshelf.com.br"><i class="fa-regular fa-envelope" aria-hidden="true"></i> oi@bookshelf.com.br</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="current-year"></span> BOOKSHELF. Feito para quem ama ler.</p>
+        <div><a href="#sobre">Privacidade</a><a href="#sobre">Termos de uso</a></div>
+        <span class="payment-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Compra segura</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+    <div class="dialog-heading">
+      <div><span class="eyebrow">SUAS PRÓXIMAS LEITURAS</span><h2 id="cart-title">Minha sacola <span id="cart-title-count">(0)</span></h2></div>
+      <button class="icon-button dialog-close" type="button" data-close-dialog="cart-dialog" aria-label="Fechar sacola"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <div class="cart-items" id="cart-items" aria-live="polite"></div>
+    <p class="cart-empty" id="cart-empty"><i class="fa-solid fa-book-open" aria-hidden="true"></i><strong>Sua sacola está esperando</strong><span>Adicione uma história para começar.</span></p>
+    <div class="cart-summary" id="cart-summary" hidden>
+      <div><span>Subtotal</span><strong id="cart-subtotal">R$ 0,00</strong></div>
+      <p>Frete calculado na próxima etapa.</p>
+      <button class="button button-primary checkout-button" id="checkout-button" type="button">Continuar compra <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+    </div>
+  </dialog>
+
+  <dialog class="login-dialog" id="login-dialog" aria-labelledby="login-title">
+    <div class="dialog-heading">
+      <div><span class="eyebrow">BOM TER VOCÊ DE VOLTA</span><h2 id="login-title">Entre na sua conta</h2></div>
+      <button class="icon-button dialog-close" type="button" data-close-dialog="login-dialog" aria-label="Fechar login"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <p class="login-intro">Suas leituras favoritas estão a um capítulo de distância.</p>
+    <form class="login-form" id="login-form">
+      <label for="login-email">E-mail</label>
+      <input id="login-email" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required>
+      <label for="login-password">Senha</label>
+      <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Sua senha" required>
+      <button class="button button-primary" type="submit">Entrar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+      <p id="login-message" role="status"></p>
+    </form>
+    <p class="login-demo-note">Esta demonstração não envia seus dados a um servidor.</p>
+  </dialog>
+</body>
+</html>
