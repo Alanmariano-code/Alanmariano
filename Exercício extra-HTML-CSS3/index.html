@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="ALESSIO'S PIZZARIA - pizza italiana artesanal, ingredientes selecionados e sabores inesquecíveis.">
+  <title>ALESSIO'S PIZZARIA | Autêntica Pizza Italiana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="ALESSIO'S Pizzaria - início">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">ALESSIO'S <small>PIZZARIA</small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-button" type="button" aria-label="Abrir carrinho" aria-controls="cartDrawer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L20.5 7H6M10 20a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm9 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>
+          <span class="cart-count" aria-live="polite">0</span>
+        </button>
+        <a class="button button-small" href="#cardapio">Peça Agora</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow reveal">Arte italiana em cada fatia</p>
+        <h1 id="hero-title" class="reveal">A verdadeira paixão pela <em>pizza italiana</em></h1>
+        <p class="hero-lead reveal">Ingredientes selecionados, massa artesanal e sabores inesquecíveis.</p>
+        <div class="hero-actions reveal">
+          <a class="button" href="#cardapio">Explorar Cardápio</a>
+          <a class="button button-outline" href="#sobre">Conheça Nossa História</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#cardapio" aria-label="Ir para o cardápio"><span></span></a>
+    </section>
+
+    <section class="menu-section section" id="cardapio" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Nosso cardápio</p>
+          <h2 id="menu-title">Sabores que contam histórias</h2>
+          <p>Receitas clássicas e combinações especiais, preparadas com cuidado artesanal.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="pizza-card reveal" data-id="margherita" data-name="Pizza Margherita" data-price="49.90" data-image="assets/images/pizza-margherita.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-margherita.jpg" alt="Pizza Margherita" loading="lazy"><span class="price">R$ 49,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Margherita</h3><p>Molho de tomate, mussarela, tomate fresco e manjericão.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="pepperoni" data-name="Pizza Pepperoni" data-price="54.90" data-image="assets/images/pizza-pepperoni.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-pepperoni.jpg" alt="Pizza Pepperoni" loading="lazy"><span class="price">R$ 54,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Pepperoni</h3><p>Mussarela, pepperoni e molho de tomate da casa.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="quatro-queijos" data-name="Pizza Quatro Queijos" data-price="57.90" data-image="assets/images/pizza-quatro-queijos.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-quatro-queijos.jpg" alt="Pizza Quatro Queijos" loading="lazy"><span class="price">R$ 57,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Quatro Queijos</h3><p>Mussarela, gorgonzola, parmesão e provolone.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="calabresa" data-name="Pizza Calabresa" data-price="52.90" data-image="assets/images/pizza-calabresa.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-calabresa.jpg" alt="Pizza Calabresa" loading="lazy"><span class="price">R$ 52,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Calabresa</h3><p>Calabresa fatiada, cebola roxa, mussarela e orégano.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="vegetariana" data-name="Pizza Vegetariana" data-price="55.90" data-image="assets/images/pizza-vegetariana.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-vegetariana.jpg" alt="Pizza Vegetariana" loading="lazy"><span class="price">R$ 55,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Vegetariana</h3><p>Tomate, pimentão, cebola, azeitonas, cogumelos e mussarela.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="frango-catupiry" data-name="Pizza Frango com Catupiry" data-price="56.90" data-image="assets/images/pizza-frango.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-frango.jpg" alt="Pizza Frango com Catupiry" loading="lazy"><span class="price">R$ 56,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Frango com Catupiry</h3><p>Frango desfiado, catupiry, milho e orégano.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="portuguesa" data-name="Pizza Portuguesa" data-price="58.90" data-image="assets/images/pizza-portuguesa.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-portuguesa.jpg" alt="Pizza Portuguesa" loading="lazy"><span class="price">R$ 58,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Portuguesa</h3><p>Presunto, ovo, cebola, ervilha, mussarela e azeitonas.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="supreme" data-name="Pizza Supreme" data-price="59.90" data-image="assets/images/pizza-supreme.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-supreme.jpg" alt="Pizza Supreme" loading="lazy"><span class="price">R$ 59,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Supreme</h3><p>Calabresa, pepperoni, pimentão, cebola e cogumelos.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="tropical" data-name="Pizza Tropical" data-price="57.90" data-image="assets/images/pizza-tropical.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-tropical.jpg" alt="Pizza Tropical" loading="lazy"><span class="price">R$ 57,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Tropical</h3><p>Presunto, abacaxi, mussarela e toque de orégano.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="margherita-especial" data-name="Pizza Margherita Especial" data-price="62.90" data-image="assets/images/pizza-especial.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-especial.jpg" alt="Pizza Margherita Especial" loading="lazy"><span class="price">R$ 62,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Margherita Especial</h3><p>Mussarela de búfala, tomate-cereja, manjericão e pesto.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="carne-sol" data-name="Pizza Carne de Sol" data-price="64.90" data-image="assets/images/pizza-carne-sol.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-carne-sol.jpg" alt="Pizza Carne de Sol" loading="lazy"><span class="price">R$ 64,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Carne de Sol</h3><p>Carne de sol desfiada, cebola caramelizada e catupiry.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+          <article class="pizza-card reveal" data-id="caprese" data-name="Pizza Caprese" data-price="61.90" data-image="assets/images/pizza-caprese.jpg">
+            <div class="pizza-image"><img src="assets/images/pizza-caprese.jpg" alt="Pizza Caprese" loading="lazy"><span class="price">R$ 61,90 <small>exemplo</small></span></div>
+            <div class="pizza-info"><h3>Pizza Caprese</h3><p>Tomate, mussarela de búfala, manjericão e azeite.</p><button class="add-button" type="button">Adicionar ao Pedido <span>+</span></button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-image reveal"><img src="assets/images/sobre-pizza.jpg" alt="Pizza artesanal sendo preparada" loading="lazy"><div class="about-badge"><strong>Arte</strong><span>&amp; tradição</span></div></div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">Sobre nós</p>
+          <h2 id="about-title">Uma tradição que nasce da paixão italiana</h2>
+          <p>Na ALESSIO'S PIZZARIA, cada receita preserva o cuidado da cozinha italiana tradicional. Nossa massa é preparada artesanalmente, fermentada com paciência e assada para alcançar uma textura crocante por fora e macia por dentro.</p>
+          <p>Selecionamos ingredientes frescos e criamos sabores que transformam cada encontro em uma experiência memorável.</p>
+          <a class="text-link" href="#contato">Venha nos visitar <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section" aria-label="Diferenciais">
+      <div class="container feature-grid">
+        <article class="feature-card reveal"><span class="feature-icon">01</span><h3>Ingredientes selecionados</h3><p>Produtos frescos, sabor autêntico e qualidade em cada etapa.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">02</span><h3>Massa artesanal</h3><p>Fermentação cuidadosa e preparação feita por mãos experientes.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">03</span><h3>Forno de alta temperatura</h3><p>Assamento rápido para bordas crocantes e centro irresistível.</p></article>
+      </div>
+    </section>
+
+    <section class="gallery section" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">Momentos Alessio's</p><h2 id="gallery-title">Nossa galeria</h2></div>
+        <div class="gallery-grid">
+          <button class="gallery-item reveal" type="button" data-full="assets/images/gallery-1.jpg" aria-label="Ampliar fotografia 1"><img src="assets/images/gallery-1.jpg" alt="Pizza italiana assada" loading="lazy"></button>
+          <button class="gallery-item reveal" type="button" data-full="assets/images/gallery-2.jpg" aria-label="Ampliar fotografia 2"><img src="assets/images/gallery-2.jpg" alt="Pizza com ingredientes frescos" loading="lazy"></button>
+          <button class="gallery-item reveal" type="button" data-full="assets/images/gallery-3.jpg" aria-label="Ampliar fotografia 3"><img src="assets/images/gallery-3.jpg" alt="Pizza artesanal" loading="lazy"></button>
+          <button class="gallery-item reveal" type="button" data-full="assets/images/gallery-4.jpg" aria-label="Ampliar fotografia 4"><img src="assets/images/gallery-4.jpg" alt="Pizza pronta para servir" loading="lazy"></button>
+          <button class="gallery-item reveal" type="button" data-full="assets/images/gallery-5.jpg" aria-label="Ampliar fotografia 5"><img src="assets/images/gallery-5.jpg" alt="Detalhe de pizza italiana" loading="lazy"></button>
+          <button class="gallery-item reveal" type="button" data-full="assets/images/gallery-6.jpg" aria-label="Ampliar fotografia 6"><img src="assets/images/gallery-6.jpg" alt="Pizza com massa artesanal" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contato" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <p class="eyebrow">Contato</p>
+            <h2 id="contact-title">Uma mesa espera por você</h2>
+            <p>Dados de demonstração — substitua pelos dados oficiais da pizzaria.</p>
+          </div>
+          <div class="contact-details">
+            <div><span>Endereço</span><strong>Endereço a confirmar</strong></div>
+            <div><span>Telefone</span><a href="tel:+551100000000">(11) 00000-0000</a></div>
+            <div><span>E-mail</span><a href="mailto:contato@alessios.com.br">contato@alessios.com.br</a></div>
+            <div><span>Horário</span><strong>Ter–Dom, 18h às 23h</strong></div>
+          </div>
+          <a class="button whatsapp-button" href="https://wa.me/551100000000" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand brand-footer" href="#inicio"><span class="brand-mark">A</span><span class="brand-text">ALESSIO'S <small>PIZZARIA</small></span></a><p>Pizza artesanal, tradição italiana e momentos inesquecíveis.</p></div>
+      <div><h3>Links rápidos</h3><a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="#sobre">Sobre Nós</a><a href="#contato">Contato</a></div>
+      <div><h3>Contato</h3><p>Endereço a confirmar</p><p>(11) 00000-0000</p><p>contato@alessios.com.br</p></div>
+      <div><h3>Redes sociais</h3><div class="socials"><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">ig</a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">fb</a><a href="https://wa.me/551100000000" target="_blank" rel="noopener" aria-label="WhatsApp">wa</a></div></div>
+    </div>
+    <div class="container footer-bottom"><p>&copy; <span id="year"></span> ALESSIO'S PIZZARIA. Todos os direitos reservados.</p></div>
+  </footer>
+
+  <div class="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-header"><h2 id="cart-title">Seu pedido</h2><button class="cart-close" type="button" aria-label="Fechar carrinho">×</button></div>
+    <div class="cart-items"></div>
+    <div class="cart-footer"><div class="cart-total"><span>Subtotal</span><strong>R$ 0,00</strong></div><button class="button checkout-button" type="button">Finalizar Pedido</button></div>
+  </aside>
+
+  <dialog class="lightbox" aria-label="Imagem ampliada"><button class="lightbox-close" type="button" aria-label="Fechar imagem">×</button><img src="" alt=""></dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
