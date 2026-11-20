@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#061b2c">
+  <meta name="description" content="Mergulhe no mundo das focas: conheça espécies, descubra curiosidades e inspire-se a proteger os oceanos.">
+  <title>SEAL WORLD — O fascinante mundo das focas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="SEAL WORLD — início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 42 42" fill="none">
+            <path d="M4 25.5c5.1 0 5.1-4.5 10.2-4.5s5.1 4.5 10.2 4.5 5.1-4.5 10.2-4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M4 33c5.1 0 5.1-4.5 10.2-4.5S19.3 33 24.4 33s5.1-4.5 10.2-4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".58"/>
+            <path d="M15 13.5c3.5-5.3 9.1-6.2 12.6-2.7 2.2 2.2 2.2 5.5 0 7.7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="27.8" cy="12.1" r="1" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-name">SEAL<span>WORLD</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span>
+      </button>
+
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#especies">Espécies</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="button button-small header-cta" href="#especies">
+        Explorar o oceano <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <img class="hero-poster" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Grey_Seal_Underwater_%2842787537600%29.jpg" alt="" fetchpriority="high">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://upload.wikimedia.org/wikipedia/commons/5/59/Grey_Seal_Underwater_%2842787537600%29.jpg" aria-hidden="true">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/7/70/Grey_seal_%28Halichoerus_grypus%29_near_Lundy.webm" type="video/webm">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <p class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> Um encontro com o extraordinário</p>
+        <h1 id="hero-title">O fascinante<br>mundo das <em>focas.</em></h1>
+        <p class="hero-copy">Descubra a beleza, a inteligência e a importância desses incríveis animais marinhos.</p>
+        <div class="hero-actions">
+          <a class="button" href="#especies">Conheça as espécies <span aria-hidden="true">↗</span></a>
+          <a class="text-link hero-secondary" href="#sobre"><span class="play-icon" aria-hidden="true">↓</span> Mergulhe nessa história</a>
+        </div>
+      </div>
+      <div class="hero-caption"><span class="caption-dot"></span> Vida selvagem, em seu ritmo natural</div>
+      <a class="scroll-cue" href="#sobre" aria-label="Rolar para a seção sobre"><span></span></a>
+    </section>
+
+    <section class="intro-section section-space" id="sobre" aria-labelledby="intro-title">
+      <div class="container intro-grid">
+        <div class="intro-image-wrap reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Grey_seal_%28Halichoerus_grypus%29_swimming%2C_Skansen%2C_Stockholm%2C_Sweden_julesvernex2-2.jpg" alt="Foca-cinzenta deslizando pela água azul" loading="lazy" decoding="async">
+          <div class="image-note"><span class="note-icon" aria-hidden="true">✳</span><span>Uma vida entre<br>dois mundos</span></div>
+          <span class="image-index">01 <i>/ 04</i></span>
+        </div>
+        <div class="intro-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Sobre as focas</p>
+          <h2 class="section-title" id="intro-title">Donas do mar.<br><em>Embaixadoras</em> do oceano.</h2>
+          <p class="body-copy">Com olhos curiosos e movimentos que parecem dança, as focas habitam costas e águas geladas ao redor do planeta. São mamíferos adaptados à vida marinha — mas que também precisam da terra e do gelo para descansar e cuidar de seus filhotes.</p>
+          <p class="body-copy">Mais do que um espetáculo da natureza, elas ajudam a manter o equilíbrio dos ecossistemas marinhos. Conhecer suas histórias é o primeiro passo para proteger o lugar que chamam de lar.</p>
+          <a class="text-link" href="#curiosidades">Descubra o que as torna únicas <span aria-hidden="true">↗</span></a>
+          <div class="intro-stat-row">
+            <div class="intro-stat"><strong>33</strong><span>espécies de<br>pinípedes no mundo</span></div>
+            <div class="stat-divider"></div>
+            <div class="intro-stat"><strong>2</strong><span>ambientes: mar<br>e terra firme</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="species-section section-space" id="especies" aria-labelledby="species-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> Conheça de perto</p>
+            <h2 class="section-title" id="species-title">Cada espécie,<br>um <em>universo.</em></h2>
+          </div>
+          <p class="heading-aside">De águas tropicais ao gelo polar,<br>elas estão em casa nos mais<br>diversos cantos do planeta.</p>
+        </div>
+        <div class="species-grid">
+          <article class="species-card reveal">
+            <a class="species-image" href="#galeria" aria-label="Ver galeria da foca-comum">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Close-up_portrait_of_a_harbor_seal%2C_Children%27s_Pool_Beach%2C_San_Diego%2C_California.jpg" alt="Retrato de uma foca-comum" loading="lazy" decoding="async">
+              <span class="card-number">01</span><span class="card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="species-info"><div><h3>Foca-comum</h3><span class="scientific-name">Phoca vitulina</span></div><p>Curiosa e adaptável, vive em costas e estuários de águas temperadas.</p></div>
+          </article>
+          <article class="species-card reveal">
+            <a class="species-image" href="#galeria" aria-label="Ver galeria da foca-leopardo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Antarctic_Sound-2016-Brown_Bluff%E2%80%93Leopard_seal_%28Hydrurga_leptonyx%29_04.jpg" alt="Foca-leopardo nas águas da Antártida" loading="lazy" decoding="async">
+              <span class="card-number">02</span><span class="card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="species-info"><div><h3>Foca-leopardo</h3><span class="scientific-name">Hydrurga leptonyx</span></div><p>Predadora ágil da Antártida, reconhecida por suas manchas e força.</p></div>
+          </article>
+          <article class="species-card reveal">
+            <a class="species-image" href="#galeria" aria-label="Ver galeria da foca-elefante">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Mirounga_leonina.jpg" alt="Foca-elefante descansando na costa" loading="lazy" decoding="async">
+              <span class="card-number">03</span><span class="card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="species-info"><div><h3>Foca-elefante</h3><span class="scientific-name">Mirounga leonina</span></div><p>Gigante dos mares, mergulha a grandes profundidades em busca de alimento.</p></div>
+          </article>
+          <article class="species-card reveal">
+            <a class="species-image" href="#galeria" aria-label="Ver galeria da foca-da-Groenlândia">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Harp_Seal_%28Pagophilus_groenlandicus%29%2C_Greenland_Sea_IMG_5006.jpg" alt="Foca-da-Groenlândia no gelo marinho" loading="lazy" decoding="async">
+              <span class="card-number">04</span><span class="card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="species-info"><div><h3>Foca-da-Groenlândia</h3><span class="scientific-name">Pagophilus groenlandicus</span></div><p>Habitante do Atlântico Norte, encontra refúgio entre as placas de gelo.</p></div>
+          </article>
+        </div>
+        <p class="section-footnote"><span aria-hidden="true">✳</span> As focas pertencem à família Phocidae, um dos grupos de pinípedes.</p>
+      </div>
+    </section>
+
+    <section class="gallery-section section-space" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-heading gallery-heading reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> Um instante selvagem</p>
+            <h2 class="section-title" id="gallery-title">Luz, água &<br><em>vida marinha.</em></h2>
+          </div>
+          <p class="heading-aside">Um convite para observar de perto.<br>Selecione uma imagem para ampliar.</p>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item gallery-item-tall reveal" type="button" data-full="https://upload.wikimedia.org/wikipedia/commons/5/59/Grey_Seal_Underwater_%2842787537600%29.jpg" data-alt="Foca-cinzenta nadando debaixo d'água">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Grey_Seal_Underwater_%2842787537600%29.jpg" alt="Foca-cinzenta nadando debaixo d'água" loading="lazy" decoding="async"><span class="gallery-zoom" aria-hidden="true">＋</span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="https://upload.wikimedia.org/wikipedia/commons/d/d7/Antarctic_Sound-2016-Brown_Bluff%E2%80%93Leopard_seal_%28Hydrurga_leptonyx%29_04.jpg" data-alt="Foca-leopardo no mar antártico">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Antarctic_Sound-2016-Brown_Bluff%E2%80%93Leopard_seal_%28Hydrurga_leptonyx%29_04.jpg" alt="Foca-leopardo no mar antártico" loading="lazy" decoding="async"><span class="gallery-zoom" aria-hidden="true">＋</span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="https://upload.wikimedia.org/wikipedia/commons/6/68/Mirounga_leonina.jpg" data-alt="Foca-elefante na costa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Mirounga_leonina.jpg" alt="Foca-elefante na costa" loading="lazy" decoding="async"><span class="gallery-zoom" aria-hidden="true">＋</span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="https://upload.wikimedia.org/wikipedia/commons/0/02/Harp_Seal_%28Pagophilus_groenlandicus%29%2C_Greenland_Sea_IMG_5006.jpg" data-alt="Foca-da-Groenlândia no gelo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Harp_Seal_%28Pagophilus_groenlandicus%29%2C_Greenland_Sea_IMG_5006.jpg" alt="Foca-da-Groenlândia no gelo" loading="lazy" decoding="async"><span class="gallery-zoom" aria-hidden="true">＋</span>
+          </button>
+          <button class="gallery-item reveal" type="button" data-full="https://upload.wikimedia.org/wikipedia/commons/0/0f/Close-up_portrait_of_a_harbor_seal%2C_Children%27s_Pool_Beach%2C_San_Diego%2C_California.jpg" data-alt="Close de uma foca-comum na água">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Close-up_portrait_of_a_harbor_seal%2C_Children%27s_Pool_Beach%2C_San_Diego%2C_California.jpg" alt="Close de uma foca-comum na água" loading="lazy" decoding="async"><span class="gallery-zoom" aria-hidden="true">＋</span>
+          </button>
+        </div>
+        <p class="media-credit" id="image-credits">Imagens: <a href="https://commons.wikimedia.org/wiki/File:Grey_Seal_Underwater_(42787537600).jpg" target="_blank" rel="noopener noreferrer">Mike Prince</a> (CC BY 2.0); <a href="https://commons.wikimedia.org/wiki/File:Grey_seal_(Halichoerus_grypus)_swimming,_Skansen,_Stockholm,_Sweden_julesvernex2-2.jpg" target="_blank" rel="noopener noreferrer">Jules Verne Times Two</a>, <a href="https://commons.wikimedia.org/wiki/File:Close-up_portrait_of_a_harbor_seal,_Children%27s_Pool_Beach,_San_Diego,_California.jpg" target="_blank" rel="noopener noreferrer">Christian David</a> e <a href="https://commons.wikimedia.org/wiki/File:Antarctic_Sound-2016-Brown_Bluff%E2%80%93Leopard_seal_(Hydrurga_leptonyx)_04.jpg" target="_blank" rel="noopener noreferrer">Godot13</a> (CC BY-SA 4.0); <a href="https://commons.wikimedia.org/wiki/File:Mirounga_leonina.jpg" target="_blank" rel="noopener noreferrer">Butterfly austral / Serge Ouachée</a> (CC BY-SA 3.0); <a href="https://commons.wikimedia.org/wiki/File:Harp_Seal_(Pagophilus_groenlandicus),_Greenland_Sea_IMG_5006.jpg" target="_blank" rel="noopener noreferrer">Brian Gratwicke</a> (CC BY 2.0).</p>
+      </div>
+    </section>
+
+    <section class="films-section section-space" id="videos" aria-labelledby="films-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> No ritmo do oceano</p>
+            <h2 class="section-title" id="films-title">Um mundo em<br><em>movimento.</em></h2>
+          </div>
+          <p class="heading-aside">Dê o play e acompanhe as focas<br>em seu habitat natural.</p>
+        </div>
+        <div class="film-grid">
+          <article class="film-card film-feature reveal">
+            <div class="film-frame">
+              <video controls playsinline preload="none" poster="https://upload.wikimedia.org/wikipedia/commons/5/59/Grey_Seal_Underwater_%2842787537600%29.jpg" aria-label="Vídeo de uma foca brincando com um mergulhador">
+                <source src="https://upload.wikimedia.org/wikipedia/commons/0/04/Seal_playing_with_NRW_diver_near_Skomer_-_Morlo_yn_chwarae_gyda_deifar_CNC_yn_Sgomer.webm" type="video/webm">
+                Seu navegador não consegue reproduzir este vídeo. <a href="https://commons.wikimedia.org/wiki/File:Seal_playing_with_NRW_diver_near_Skomer_-_Morlo_yn_chwarae_gyda_deifar_CNC_yn_Sgomer.webm">Assista no Wikimedia Commons.</a>
+              </video>
+              <span class="film-duration">ENCONTRO NO MAR</span>
+            </div>
+            <div class="film-caption"><div><span class="film-kicker">01 — CURIOSIDADE</span><h3>Um encontro inesperado</h3></div><a href="https://commons.wikimedia.org/wiki/File:Seal_playing_with_NRW_diver_near_Skomer_-_Morlo_yn_chwarae_gyda_deifar_CNC_yn_Sgomer.webm" target="_blank" rel="noopener noreferrer" aria-label="Abrir vídeo no Wikimedia Commons">↗</a></div>
+          </article>
+          <article class="film-card reveal">
+            <div class="film-frame">
+              <video controls playsinline preload="none" poster="https://upload.wikimedia.org/wikipedia/commons/6/69/Grey_seal_%28Halichoerus_grypus%29_swimming%2C_Skansen%2C_Stockholm%2C_Sweden_julesvernex2-2.jpg" aria-label="Vídeo de focas-comuns em seu habitat">
+                <source src="https://upload.wikimedia.org/wikipedia/commons/1/13/Harbor_seals_%28Phoca_vitulina%29.webm" type="video/webm">
+                Seu navegador não consegue reproduzir este vídeo. <a href="https://commons.wikimedia.org/wiki/File:Harbor_seals_(Phoca_vitulina).webm">Assista no Wikimedia Commons.</a>
+              </video>
+              <span class="film-duration">VIDA EM GRUPO</span>
+            </div>
+            <div class="film-caption"><div><span class="film-kicker">02 — CONVIVÊNCIA</span><h3>Entre companheiras</h3></div><a href="https://commons.wikimedia.org/wiki/File:Harbor_seals_(Phoca_vitulina).webm" target="_blank" rel="noopener noreferrer" aria-label="Abrir vídeo no Wikimedia Commons">↗</a></div>
+          </article>
+          <article class="film-card reveal">
+            <div class="film-frame">
+              <video controls playsinline preload="none" poster="https://upload.wikimedia.org/wikipedia/commons/5/59/Grey_Seal_Underwater_%2842787537600%29.jpg" aria-label="Vídeo de focas na costa de Skomer">
+                <source src="https://upload.wikimedia.org/wikipedia/commons/2/26/Skomer_Seals.webm" type="video/webm">
+                Seu navegador não consegue reproduzir este vídeo. <a href="https://commons.wikimedia.org/wiki/File:Skomer_Seals.webm">Assista no Wikimedia Commons.</a>
+              </video>
+              <span class="film-duration">COSTA SELVAGEM</span>
+            </div>
+            <div class="film-caption"><div><span class="film-kicker">03 — HABITAT</span><h3>Refúgio em Skomer</h3></div><a href="https://commons.wikimedia.org/wiki/File:Skomer_Seals.webm" target="_blank" rel="noopener noreferrer" aria-label="Abrir vídeo no Wikimedia Commons">↗</a></div>
+          </article>
+        </div>
+        <p class="media-credit">Vídeos: <a href="https://commons.wikimedia.org/wiki/File:Seal_playing_with_NRW_diver_near_Skomer_-_Morlo_yn_chwarae_gyda_deifar_CNC_yn_Sgomer.webm" target="_blank" rel="noopener noreferrer">Welsh Government / NRW</a>, <a href="https://commons.wikimedia.org/wiki/File:Harbor_seals_(Phoca_vitulina).webm" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> e <a href="https://commons.wikimedia.org/wiki/File:Skomer_Seals.webm" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
+      </div>
+    </section>
+
+    <section class="facts-section section-space" id="curiosidades" aria-labelledby="facts-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> Pequenas grandes descobertas</p>
+            <h2 class="section-title" id="facts-title">Você sabia?</h2>
+          </div>
+          <p class="heading-aside">O oceano guarda histórias incríveis.<br>Aqui vão algumas delas.</p>
+        </div>
+        <div class="facts-grid">
+          <article class="fact-card reveal"><span class="fact-icon" aria-hidden="true">◉</span><span class="fact-label">SENTIDOS</span><h3>Bigodes que sentem o caminho</h3><p>As vibrissas percebem pequenas vibrações na água e ajudam a rastrear o movimento dos peixes.</p><span class="fact-number">01</span></article>
+          <article class="fact-card reveal"><span class="fact-icon" aria-hidden="true">◌</span><span class="fact-label">ADAPTAÇÃO</span><h3>Respiração de mergulhadora</h3><p>Durante o mergulho, o corpo economiza oxigênio e direciona o fluxo sanguíneo para órgãos vitais.</p><span class="fact-number">02</span></article>
+          <article class="fact-card reveal"><span class="fact-icon" aria-hidden="true">✳</span><span class="fact-label">FAMÍLIA</span><h3>Vozes que se reconhecem</h3><p>Mães e filhotes podem usar vocalizações próprias para se encontrar em meio a uma colônia barulhenta.</p><span class="fact-number">03</span></article>
+          <article class="fact-card reveal"><span class="fact-icon" aria-hidden="true">⌁</span><span class="fact-label">MOVIMENTO</span><h3>Dois jeitos de nadar</h3><p>As focas verdadeiras impulsionam o corpo com as nadadeiras traseiras, como se dançassem na água.</p><span class="fact-number">04</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="preserve-section" id="contato" aria-labelledby="preserve-title">
+      <div class="preserve-backdrop" aria-hidden="true"></div>
+      <div class="container preserve-content reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> O futuro também é nosso</p>
+        <h2 id="preserve-title">Um oceano vivo<br>começa com <em>cada um.</em></h2>
+        <p>Proteger as focas é proteger o equilíbrio dos oceanos. Informe-se, compartilhe conhecimento e apoie iniciativas de conservação marinha.</p>
+        <a class="button button-light" href="https://www.worldwildlife.org/species/seal" target="_blank" rel="noopener noreferrer">Saiba como proteger <span aria-hidden="true">↗</span></a>
+      </div>
+      <span class="preserve-coordinates" aria-hidden="true">NATURE NEEDS US · 01° 32' S / 32° 25' W</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand-block">
+        <a class="brand" href="#inicio" aria-label="SEAL WORLD — voltar ao início">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 42" fill="none"><path d="M4 25.5c5.1 0 5.1-4.5 10.2-4.5s5.1 4.5 10.2 4.5 5.1-4.5 10.2-4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M4 33c5.1 0 5.1-4.5 10.2-4.5S19.3 33 24.4 33s5.1-4.5 10.2-4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".58"/><path d="M15 13.5c3.5-5.3 9.1-6.2 12.6-2.7 2.2 2.2 2.2 5.5 0 7.7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="27.8" cy="12.1" r="1" fill="currentColor"/></svg></span>
+          <span class="brand-name">SEAL<span>WORLD</span></span>
+        </a>
+        <p>Um mergulho no mundo das focas.<br>Um olhar mais atento para o oceano.</p>
+      </div>
+      <div class="footer-nav-block"><span class="footer-label">EXPLORE</span><a href="#sobre">Sobre as focas</a><a href="#especies">Espécies</a><a href="#galeria">Galeria</a><a href="#videos">Vídeos</a></div>
+      <div class="footer-nav-block"><span class="footer-label">DESCUBRA</span><a href="#curiosidades">Curiosidades</a><a href="#contato">Preservação</a><a href="#image-credits">Créditos das imagens ↗</a></div>
+      <div class="footer-note"><span class="footer-label">NOSSO PROPÓSITO</span><p>Conhecimento é o primeiro passo para um oceano mais protegido.</p><a class="back-top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year">2026</span> SEAL WORLD. Feito com respeito pelo oceano.</span><span>MARAVILHAS QUE MERECEM SER PROTEGIDAS <span aria-hidden="true">✳</span></span></div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Imagem ampliada">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem ampliada">×</button>
+    <img src="" alt="">
+    <p class="lightbox-caption"></p>
+  </dialog>
+</body>
+</html>
