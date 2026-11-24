@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08070e">
+  <meta name="description" content="Anime Arena: The Awakening — uma experiência de RPG de ação e fantasia em JavaScript puro.">
+  <title>ANIME ARENA — The Awakening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Mono:wght@400;500&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="ANIME ARENA — início">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 3 35 12v16l-15 9L5 28V12L20 3Z" stroke="currentColor" stroke-width="1.5"/><path d="m22 7-11 17h8l-1 10 11-17h-8l1-10Z" fill="currentColor"/></svg></span>
+        <span class="brand-copy">
+          <span class="brand-name">ANIME <span>ARENA</span></span>
+          <span class="brand-caption">THE AWAKENING</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Navegação principal">
+        <a class="nav-link is-active" href="#home">HOME</a>
+        <a class="nav-link" href="#characters">PERSONAGENS</a>
+        <a class="nav-link" href="#combat">BATALHA</a>
+        <a class="nav-link" href="#history">HISTÓRICO</a>
+      </nav>
+      <div class="system-status"><span class="status-dot"></span> ARENA ONLINE</div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="opening-screen" id="home" aria-labelledby="hero-title">
+      <div class="opening-backdrop" aria-hidden="true">
+        <span class="opening-moon"></span><span class="opening-rift"></span>
+        <span class="opening-particle particle-one"></span><span class="opening-particle particle-two"></span>
+        <span class="opening-particle particle-three"></span><span class="opening-particle particle-four"></span>
+        <div class="opening-horizon"></div>
+        <div class="opening-character opening-hero">
+          <svg viewBox="0 0 300 440" fill="none">
+            <path d="m54 409 25-92-4-85 29-69h95l28 70-2 89 29 87H54Z" fill="#26163e" stroke="#bc90ff" stroke-width="3"/>
+            <path d="m86 314 62-34 60 34 15 91H68l18-91Z" fill="#533071" stroke="#d2a7ff" stroke-width="2"/>
+            <path d="m111 265 37 44 38-44-13 100-25 34-28-34-9-100Z" fill="#b172e4"/>
+            <path d="m85 177-12-47 8-54 39-48 36 30 39-37 11 44 33 32-16 51-19 74h-95l-19-45Z" fill="url(#opening-hair)" stroke="#d2a7ff" stroke-width="3" stroke-linejoin="round"/>
+            <path d="m99 138 15-49 35-20 37 20 17 50-12 68-42 28-39-28-11-69Z" fill="url(#opening-skin)" stroke="#f1c8ff" stroke-width="3"/>
+            <path d="m101 145-18 5 5 27 16 5m99-37 18 5-5 27-16 5" fill="#c47bda" stroke="#efbcff" stroke-width="2"/>
+            <path d="m102 132 13-58 28 24 9-51 26 39 26-18 1 59-23-20-16 19-17-24-20 22-12-17-15 25Z" fill="#592d89" stroke="#d2a7ff" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M112 156c8-8 20-8 28 0l-3 12c-8 4-17 3-23-2l-2-10Zm47 0c8-8 20-8 28 0l-2 10c-6 5-15 6-23 2l-3-12Z" fill="#f5eaff"/>
+            <ellipse cx="127" cy="161" rx="4" ry="7" fill="#6734a0"/><ellipse cx="173" cy="161" rx="4" ry="7" fill="#6734a0"/>
+            <path d="m111 147 31-4m17 0 31 4" stroke="#552760" stroke-width="5" stroke-linecap="round"/>
+            <path d="m145 171-5 20 9 2" stroke="#a857a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M139 206q10 8 20 0" stroke="#8f416e" stroke-width="3" stroke-linecap="round"/>
+            <path d="m91 105-18 99 25 39 10-49m97-103 18 96-20 57-8-50" fill="#6d3d9d" stroke="#d2a7ff" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="m92 220 16 11m95-11-16 11m-49 69 11 18 13-18" fill="none" stroke="#f4cb83" stroke-width="3"/>
+            <path d="m133 290 15 18 16-18-16 38-15-38Z" fill="#ffd47f" stroke="#fff0bd" stroke-width="2"/>
+            <circle cx="148" cy="330" r="7" fill="#fff0a5" stroke="#fff" stroke-width="2"/>
+            <defs>
+              <linearGradient id="opening-skin" x1="106" y1="83" x2="190" y2="235" gradientUnits="userSpaceOnUse"><stop stop-color="#ffe2f8"/><stop offset="1" stop-color="#c578ce"/></linearGradient>
+              <linearGradient id="opening-hair" x1="89" y1="42" x2="211" y2="236" gradientUnits="userSpaceOnUse"><stop stop-color="#a667d7"/><stop offset=".52" stop-color="#632f9e"/><stop offset="1" stop-color="#31194f"/></linearGradient>
+            </defs>
+            <path d="m79 223-42 74 25 15 60-61m111-28 44 74-24 16-65-57" fill="#69418f" stroke="#d2a7ff" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M36 292V220m-13 15h26" stroke="#86dfff" stroke-width="5" stroke-linecap="round"/>
+            <path d="m36 202 8-15 8 15-8 15-8-15Z" fill="#bceeff" stroke="#fff" stroke-width="2"/>
+            <path d="m144 313 5 22 5-22" stroke="#ffe0ff" stroke-width="3"/>
+          </svg>
+          <span class="opening-character-label"><b>01</b> THE AWAKENED</span>
+        </div>
+        <div class="opening-character opening-guardian">
+          <svg viewBox="0 0 300 440" fill="none">
+            <path d="m48 411 26-90-4-83 31-73h99l30 75-3 83 29 88H48Z" fill="#102539" stroke="#6de0ff" stroke-width="3"/>
+            <path d="m78 311 69-38 66 38 16 93H62l16-93Z" fill="#1e536e" stroke="#a8efff" stroke-width="2"/>
+            <path d="m110 264 38 42 39-42-10 101-29 34-29-34-9-101Z" fill="#3486a3"/>
+            <path d="m79 171-5-61 25-50 47-22 52 21 31 51-12 66-29 58h-82l-27-63Z" fill="#1b4562" stroke="#79dfff" stroke-width="3" stroke-linejoin="round"/>
+            <path d="m91 149 13-50 43-21 44 20 16 48-12 57-49 29-46-29-9-54Z" fill="url(#warden-armor)" stroke="#b3f1ff" stroke-width="3"/>
+            <path d="m82 146 21-23 29 10 18-22 21 22 30-10 18 24-21-4-19 12-29-8-28 8-20-12-20 3Z" fill="#102b46" stroke="#82ddff" stroke-width="2"/>
+            <path d="m112 151 25 5m21 0 25-5" stroke="#ddfbff" stroke-width="6" stroke-linecap="round"/>
+            <path d="m119 151 11 3m35 0 11-3" stroke="#43cfff" stroke-width="2" stroke-linecap="round"/>
+            <path d="m148 163-4 17 8 2" stroke="#72c5dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M137 197q11 6 22 0" stroke="#306e8a" stroke-width="3" stroke-linecap="round"/>
+            <path d="m85 104 13-58 39 23 10-52 29 39 33-19 15 70-29-21-18 16-28-18-28 20-18-16-18 19Z" fill="#153653" stroke="#79dfff" stroke-width="3" stroke-linejoin="round"/>
+            <path d="m95 225 21 20 32-14 32 14 25-20m-57 14v36m-19 39 19 18 20-18" fill="none" stroke="#a8efff" stroke-width="3"/>
+            <path d="m133 289 15 19 16-19-16 41-15-41Z" fill="#82e8ff" stroke="#d8fbff" stroke-width="2"/>
+            <circle cx="148" cy="330" r="7" fill="#a5f2ff" stroke="#fff" stroke-width="2"/>
+            <defs><linearGradient id="warden-armor" x1="105" y1="78" x2="191" y2="226" gradientUnits="userSpaceOnUse"><stop stop-color="#82c5d9"/><stop offset=".55" stop-color="#417f9d"/><stop offset="1" stop-color="#194764"/></linearGradient></defs>
+            <path d="m76 219-48 67 22 19 68-56m112-30 48 67-22 19-69-57" fill="#28647f" stroke="#90e9ff" stroke-width="3" stroke-linejoin="round"/>
+            <path d="m25 274-15 22 18 18 24-20-27-20Zm249 0 16 22-18 18-24-20 26-20Z" fill="#a5f2ff"/>
+            <path d="M147 321h7m-7 13h7m-7 13h7" stroke="#d8f8ff" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span class="opening-character-label"><b>30</b> THE VOID WARDEN</span>
+        </div>
+        <span class="opening-streak streak-one"></span><span class="opening-streak streak-two"></span>
+      </div>
+      <div class="opening-content">
+        <div class="opening-copy">
+          <div class="opening-kicker"><span></span> ANIME FANTASY · ACTION RPG</div>
+          <h1 id="hero-title">ANIME<br><span>ARENA</span></h1>
+          <p class="opening-subtitle">THE AWAKENING</p>
+          <p class="opening-description">Uma nova lenda desperta. Escolha seu poder e enfrente o guardião do vazio.</p>
+          <div class="opening-actions">
+            <a class="button opening-button" href="#combat">INICIAR BATALHA <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
+            <a class="opening-secondary" href="#characters">CONFIGURAR PERSONAGENS <span>↓</span></a>
+          </div>
+          <a class="race-teaser" href="#speed-test">
+            <span class="race-teaser-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 15h2l2-6h6l6 3h2l2 3v3H3v-3Z" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="18" r="2" fill="#111" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="2" fill="#111" stroke="currentColor" stroke-width="1.5"/></svg></span>
+            <span><b>DESAFIO EXTRA</b><small>Teste de velocidade</small></span><span class="race-teaser-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="opening-footer"><span>CHAPTER 01 <i>—</i> THE AWAKENING</span><span>SCROLL TO ENTER THE ARENA <b>↓</b></span></div>
+      <div class="opening-scroll-mark" aria-hidden="true"></div>
+    </section>
+
+    <section class="section-shell module-section" id="speed-test" aria-labelledby="speed-title">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> MODO EXTRA <span class="eyebrow-index">VELOCITY TRIAL</span></div>
+          <h2 id="speed-title">Desafio de <span>velocidade</span></h2>
+          <p>Dois veículos. Uma linha de chegada. Quem cruza primeiro?</p>
+        </div>
+        <span class="module-number" aria-hidden="true">01</span>
+      </div>
+
+      <div class="glass-panel race-panel">
+        <div class="panel-topline"><span><span class="live-dot"></span> CIRCUITO DE COMPARAÇÃO</span><span>KM/H <span class="topline-separator">/</span> TEMPO REAL</span></div>
+        <form id="race-form" class="race-form">
+          <div class="vehicle-grid">
+            <fieldset class="vehicle-card vehicle-purple">
+              <legend><span class="vehicle-index">VEÍCULO 01</span></legend>
+              <div class="vehicle-visual" aria-hidden="true">
+                <svg viewBox="0 0 112 56" fill="none">
+                  <path d="M11 35h5l5-13h12l13-13h27l16 13h8l10 13h4v11H11V35Z" fill="currentColor" fill-opacity=".12" stroke="currentColor" stroke-width="2"/>
+                  <path d="M37 22 49 12h20l12 10H37Z" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="31" cy="46" r="6" fill="#12111a" stroke="currentColor" stroke-width="2"/><circle cx="89" cy="46" r="6" fill="#12111a" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 37h89" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>
+              <label for="vehicle-one-name">NOME DO VEÍCULO</label>
+              <input id="vehicle-one-name" name="vehicleOneName" type="text" maxlength="30" placeholder="Ex.: Shadow Runner" required autocomplete="off">
+              <label for="vehicle-one-speed">VELOCIDADE <span>(KM/H)</span></label>
+              <div class="input-with-unit"><input id="vehicle-one-speed" name="vehicleOneSpeed" type="number" min="0" step="any" placeholder="320" required inputmode="decimal"><span>KM/H</span></div>
+            </fieldset>
+
+            <div class="race-vs" aria-hidden="true"><span>VS</span></div>
+
+            <fieldset class="vehicle-card vehicle-blue">
+              <legend><span class="vehicle-index">VEÍCULO 02</span></legend>
+              <div class="vehicle-visual" aria-hidden="true">
+                <svg viewBox="0 0 112 56" fill="none">
+                  <path d="M11 35h5l5-13h12l13-13h27l16 13h8l10 13h4v11H11V35Z" fill="currentColor" fill-opacity=".12" stroke="currentColor" stroke-width="2"/>
+                  <path d="M37 22 49 12h20l12 10H37Z" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="31" cy="46" r="6" fill="#12111a" stroke="currentColor" stroke-width="2"/><circle cx="89" cy="46" r="6" fill="#12111a" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 37h89" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>
+              <label for="vehicle-two-name">NOME DO VEÍCULO</label>
+              <input id="vehicle-two-name" name="vehicleTwoName" type="text" maxlength="30" placeholder="Ex.: Neon Phantom" required autocomplete="off">
+              <label for="vehicle-two-speed">VELOCIDADE <span>(KM/H)</span></label>
+              <div class="input-with-unit"><input id="vehicle-two-speed" name="vehicleTwoSpeed" type="number" min="0" step="any" placeholder="280" required inputmode="decimal"><span>KM/H</span></div>
+            </fieldset>
+          </div>
+          <div class="race-footer">
+            <p><span class="info-icon" aria-hidden="true">i</span> Informe os dados dos veículos para iniciar a comparação.</p>
+            <button class="button button-primary" type="submit" id="race-button">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 12-6-4 12-2-5-6-1Z"/></svg>
+              INICIAR CORRIDA
+            </button>
+          </div>
+        </form>
+
+        <div class="race-track" id="race-track" aria-hidden="true">
+          <div class="track-lane"><span class="track-car track-car-one" aria-hidden="true"><svg viewBox="0 0 24 12"><path d="M2 7h3l2-4h8l4 4h3v3H2V7Z" fill="currentColor"/><circle cx="7" cy="10" r="2" fill="#12101a" stroke="currentColor"/><circle cx="18" cy="10" r="2" fill="#12101a" stroke="currentColor"/></svg></span></div>
+          <div class="track-lane"><span class="track-car track-car-two" aria-hidden="true"><svg viewBox="0 0 24 12"><path d="M2 7h3l2-4h8l4 4h3v3H2V7Z" fill="currentColor"/><circle cx="7" cy="10" r="2" fill="#12101a" stroke="currentColor"/><circle cx="18" cy="10" r="2" fill="#12101a" stroke="currentColor"/></svg></span></div>
+          <span class="finish-line"></span>
+        </div>
+        <div class="race-results" id="race-results" aria-live="polite" aria-atomic="true" hidden></div>
+      </div>
+    </section>
+
+    <section class="section-shell module-section combat-section" id="combat" aria-labelledby="combat-title">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> EPISÓDIO 01 <span class="eyebrow-index">THE AWAKENING</span></div>
+          <h2 id="combat-title">O destino da arena<br><span>está em suas mãos.</span></h2>
+          <p>Prepare seu herói. Escolha uma habilidade. Mude o rumo da batalha.</p>
+        </div>
+        <span class="module-number" aria-hidden="true">02</span>
+      </div>
+
+      <div class="glass-panel combat-panel">
+        <div class="panel-topline"><span><span class="live-dot live-blue"></span> <span>DUEL OF FATES</span><span class="duel-opponents">HERÓI <b>VS</b> GUARDIÃO</span></span><span>ROUND <span id="round-counter">00</span> <span class="topline-separator">/</span> PVE</span></div>
+        <form id="combat-form">
+          <div class="battle-scene" aria-hidden="true">
+            <span class="scene-moon"></span>
+            <span class="scene-star scene-star-one"></span>
+            <span class="scene-star scene-star-two"></span>
+            <span class="scene-star scene-star-three"></span>
+            <span class="scene-cloud scene-cloud-one"></span>
+            <span class="scene-cloud scene-cloud-two"></span>
+            <span class="scene-hill scene-hill-back"></span>
+            <span class="scene-hill scene-hill-front"></span>
+            <span class="scene-ground"></span>
+            <div class="battle-sprite battle-hero">
+              <span class="scene-nameplate"><span id="scene-hero-name">HERÓI</span> <i>LV. <span id="scene-hero-level">24</span></i></span>
+              <svg viewBox="0 0 120 150" fill="none">
+                <path d="M22 131 29 107l1-26 13-21h34l14 21 3 28 8 22H22Z" fill="#33215d" stroke="#b995ff" stroke-width="2"/>
+                <path d="m31 108 19-9 10 14 11-14 19 9 4 24H27l4-24Z" fill="#6641a1" stroke="#c5a5ff" stroke-width="2"/>
+                <path d="m46 85 14 16 13-16-2 29-11 15-12-15-2-29Z" fill="#a883f3"/>
+                <path d="m36 63 8-25 16-17 18 17 7 25-11 20H47L36 63Z" fill="#a970db" stroke="#e1c6ff" stroke-width="2"/>
+                <path d="m33 43 23-34 34 31-19-8-16 9-22-4Z" fill="#7042b4" stroke="#c5a5ff" stroke-width="2" stroke-linejoin="round"/>
+                <path d="m45 57 10 3m10 0 10-3" stroke="#321e50" stroke-width="4" stroke-linecap="round"/>
+                <path d="m31 79-13 25 8 5 19-21m43-9 17 23-7 6-24-15" fill="#8f61d0" stroke="#c5a5ff" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M18 105v-22m-5 5h10" stroke="#86dfff" stroke-width="3" stroke-linecap="round"/>
+                <path d="m16 78 3-6 3 6-3 6-3-6Z" fill="#9fe7ff" filter="url(#hero-glow)"/>
+                <defs><filter id="hero-glow" x="0" y="0" width="40" height="45" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="3"/></filter></defs>
+              </svg>
+            </div>
+            <span class="battle-projectile" id="battle-projectile"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M27 2 9 27h12l-3 19 21-27H26l1-17Z" fill="currentColor"/></svg></span>
+            <span class="battle-impact" id="battle-impact"></span>
+            <div class="battle-sprite battle-enemy">
+              <span class="scene-nameplate"><span id="scene-guardian-name">GUARDIÃO</span> <i>LV. <span id="scene-guardian-level">30</span></i></span>
+              <svg viewBox="0 0 120 150" fill="none">
+                <path d="m19 130 9-27 4-24 13-15h31l13 15 4 24 8 27H19Z" fill="#17344a" stroke="#66d8ff" stroke-width="2"/>
+                <path d="m30 105 18-10 12 13 12-13 18 10 5 25H25l5-25Z" fill="#235773" stroke="#98eaff" stroke-width="2"/>
+                <path d="m43 84 17 15 17-15-3 32-14 13-14-13-3-32Z" fill="#357e9f"/>
+                <path d="m36 45 14-17h21l15 18-3 32-11 14H49L37 78l-1-33Z" fill="#387a98" stroke="#a3eaff" stroke-width="2"/>
+                <path d="m34 45 9-26 17-10 19 10 11 26-18-9-13 5-12-5-13 9Z" fill="#24516d" stroke="#73dfff" stroke-width="2" stroke-linejoin="round"/>
+                <path d="m44 57 11 2m10 0 11-2" stroke="#bbf2ff" stroke-width="4" stroke-linecap="round"/>
+                <path d="m29 77-16 20 9 8 21-18m47-10 16 20-9 8-22-16" fill="#34728f" stroke="#8ee6ff" stroke-width="2" stroke-linejoin="round"/>
+                <path d="m13 91-5 8 7 6 8-7-10-7Zm93 0 6 8-7 6-8-7 9-7Z" fill="#91eaff"/>
+              </svg>
+            </div>
+            <span class="scene-vs" aria-hidden="true">VS</span>
+            <span class="scene-caption">ARENA DAS RUNAS <i>•</i> TURNO <span id="scene-round">01</span></span>
+          </div>
+          <div class="combatants-grid" id="characters">
+            <fieldset class="combatant-card attacker-card" id="attacker-card">
+              <legend><span class="combatant-role"><span class="role-symbol" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m10 1 2.2 6.1L19 10l-6.8 2.9L10 19l-2.2-6.1L1 10l6.8-2.9L10 1Z" fill="currentColor"/></svg></span> SUA CARTA DE HERÓI</span></legend>
+              <div class="fighter-portrait attacker-portrait" aria-hidden="true">
+                <div class="portrait-ring"></div>
+                <svg viewBox="0 0 72 72" fill="none"><path d="M36 8 44 26 63 18 55 37l9 18-21-3-7 12-7-12-21 3 9-18-8-19 19 8 8-18Z" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.5"/><path d="m36 24 4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1 4-9Z" fill="currentColor"/></svg>
+              </div>
+              <span class="card-rank">AWAKENED · CLASSE ARCANA</span>
+              <label for="attacker-name">NOME DO HERÓI</label>
+              <input id="attacker-name" name="attackerName" type="text" maxlength="30" placeholder="Ex.: Aether, o Errante" required autocomplete="off">
+              <div class="character-stats">
+                <div><label for="attack-power">PODER DE ATAQUE</label><div class="stat-input"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1 2.2 6.1L19 10l-6.8 2.9L10 19l-2.2-6.1L1 10l6.8-2.9L10 1Z" fill="currentColor"/></svg><input id="attack-power" name="attackPower" type="number" min="0" step="any" placeholder="85" required inputmode="decimal"><span class="stat-unit">ATK</span></div></div>
+                <div><label for="attacker-level">NÍVEL</label><div class="stat-input level-input"><input id="attacker-level" name="attackerLevel" type="number" min="1" max="999" step="1" value="24" required inputmode="numeric"><span class="stat-unit">LV</span></div></div>
+              </div>
+            </fieldset>
+
+            <div class="combat-center" aria-hidden="true">
+              <div class="combat-emblem"><span>VS</span></div>
+              <span class="center-label">DUEL<br>MÁGICO</span>
+              <span class="spell-projectile" id="spell-projectile"><svg viewBox="0 0 48 48"><path d="M27 2 9 27h12l-3 19 21-27H26l1-17Z" fill="currentColor"/></svg></span>
+              <div class="impact-flash" id="impact-flash"></div>
+            </div>
+
+            <fieldset class="combatant-card defender-card" id="defender-card">
+              <legend><span class="combatant-role"><span class="role-symbol shield-symbol" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m10 1 7 3v5c0 4.5-3 7.4-7 10-4-2.6-7-5.5-7-10V4l7-3Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span> CARTA DO GUARDIÃO</span></legend>
+              <div class="fighter-portrait defender-portrait" aria-hidden="true">
+                <div class="portrait-ring"></div>
+                <svg viewBox="0 0 72 72" fill="none"><path d="M36 7 59 16v17c0 15-10 25-23 32C23 58 13 48 13 33V16L36 7Z" fill="currentColor" fill-opacity=".14" stroke="currentColor" stroke-width="1.7"/><path d="M36 18 49 23v10c0 9-5 16-13 22-8-6-13-13-13-22V23l13-5Z" fill="currentColor" fill-opacity=".22" stroke="currentColor" stroke-width="1.3"/><path d="m29 35 5 5 10-11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="card-rank">VOID WARDEN · ELITE</span>
+              <label for="defender-name">NOME DO GUARDIÃO</label>
+              <input id="defender-name" name="defenderName" type="text" maxlength="30" placeholder="Ex.: Guardião do Vazio" required autocomplete="off">
+              <div class="defender-stats">
+                <div>
+                  <label for="defender-health">PONTOS DE VIDA</label>
+                  <div class="stat-input health-input"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 17S2 12.5 2 7.5A4 4 0 0 1 10 6a4 4 0 0 1 8 1.5C18 12.5 10 17 10 17Z" fill="currentColor"/></svg><input id="defender-health" name="defenderHealth" type="number" min="0" step="any" placeholder="150" required inputmode="decimal"><span class="stat-unit">HP</span></div>
+                </div>
+                <div>
+                  <label for="defense-power">PODER DE DEFESA</label>
+                  <div class="stat-input"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 1 7 3v5c0 4.5-3 7.4-7 10-4-2.6-7-5.5-7-10V4l7-3Z" stroke="currentColor" stroke-width="1.8"/></svg><input id="defense-power" name="defensePower" type="number" min="0" step="any" placeholder="40" required inputmode="decimal"><span class="stat-unit">DEF</span></div>
+                </div>
+                <div><label for="defender-level">NÍVEL</label><div class="stat-input level-input"><input id="defender-level" name="defenderLevel" type="number" min="1" max="999" step="1" value="30" required inputmode="numeric"><span class="stat-unit">LV</span></div></div>
+              </div>
+              <label class="shield-toggle" for="has-shield">
+                <input id="has-shield" name="hasShield" type="checkbox">
+                <span class="toggle-track" aria-hidden="true"><span></span></span>
+                <span>Possui escudo?</span>
+                <span class="shield-state" id="shield-state">DESATIVADO</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <section class="spellbook" aria-labelledby="spellbook-title">
+            <div class="spellbook-heading">
+              <div><span class="spellbook-kicker">HABILIDADES DO HERÓI</span><h3 id="spellbook-title">Escolha sua habilidade</h3></div>
+              <span class="spellbook-hint">SELECIONE PARA ATIVAR</span>
+            </div>
+            <div class="spell-deck" role="group" aria-label="Habilidades de combate">
+              <button class="spell-card spell-fire" type="button" data-spell="dragon" aria-pressed="false">
+                <span class="spell-cost"><span>01</span> HABILIDADE</span>
+                <span class="spell-art" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M27 3c2 11-7 13-4 21 2-3 5-5 8-7 0 7 8 10 8 17a15 15 0 0 1-30 0c0-7 4-11 8-16 0 7 2 9 5 10-3-10 5-15 5-25Z" fill="currentColor"/><path d="M24 43a8 8 0 0 0 8-8c0-3-2-5-4-7 0 4-2 5-4 6-1-3 0-5 1-7-5 3-9 7-9 11a8 8 0 0 0 8 5Z" fill="#fff1d2"/></svg></span>
+                <span class="spell-name">Chama do Dragão</span>
+                <span class="spell-description">Libera um arco de fogo escarlate.</span>
+                <span class="spell-power">ELEMENTO <strong>FOGO</strong></span>
+              </button>
+              <button class="spell-card spell-celestial" type="button" data-spell="celestial" aria-pressed="false">
+                <span class="spell-cost"><span>02</span> HABILIDADE</span>
+                <span class="spell-art" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M28 3 12 27h11l-3 18 17-25H26l2-17Z" fill="currentColor"/><path d="M5 18h8m22 13h8M11 8l5 5m17 22 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                <span class="spell-name">Corte Celestial</span>
+                <span class="spell-description">Um golpe veloz de energia celestial.</span>
+                <span class="spell-power">ELEMENTO <strong>CELESTIAL</strong></span>
+              </button>
+              <button class="spell-card spell-arcane is-selected" type="button" data-spell="arcane" aria-pressed="true">
+                <span class="spell-cost"><span>03</span> HABILIDADE</span>
+                <span class="spell-art" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="13" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="5" fill="currentColor"/><path d="M24 3v8m0 26v8M3 24h8m26 0h8M9 9l6 6m18 18 6 6m0-30-6 6M15 33l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                <span class="spell-name">Explosão Arcana</span>
+                <span class="spell-description">Condensa energia e detona em impacto.</span>
+                <span class="spell-power">ELEMENTO <strong>ARCANO</strong></span>
+              </button>
+              <button class="spell-card spell-divine" type="button" data-spell="divine" aria-pressed="false">
+                <span class="spell-cost"><span>04</span> HABILIDADE</span>
+                <span class="spell-art" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8" fill="currentColor"/><circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2"/><path d="M24 2v7m0 30v7M2 24h7m30 0h7M8.5 8.5l5 5m21 21 5 5m0-31-5 5m-21 21-5 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+                <span class="spell-name">Tempestade Divina</span>
+                <span class="spell-description">Invoca um raio dourado sobre o inimigo.</span>
+                <span class="spell-power">ELEMENTO <strong>DIVINO</strong></span>
+              </button>
+            </div>
+            <p class="spell-rule">O estilo da habilidade muda a animação; o dano segue seus atributos e a defesa do guardião.</p>
+          </section>
+
+          <div class="health-status" aria-live="polite" aria-label="Pontos de vida do defensor">
+            <div class="health-meta"><span><span class="health-dot"></span> HP DO DEFENSOR</span><span><strong id="health-current">—</strong> <span class="health-divider">/</span> <span id="health-max">—</span></span></div>
+            <div class="health-track" role="progressbar" aria-label="Vida do defensor" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" id="health-progress"><span class="health-fill" id="health-fill"></span></div>
+          </div>
+
+          <div class="combat-actions">
+            <button class="button button-primary attack-button" type="submit" id="attack-button">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m11 2-7 9h5l-1 7 8-10h-5V2Z"/></svg>
+              EXECUTAR ATAQUE
+            </button>
+            <button class="button button-secondary" type="button" id="reset-combat">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10a7 7 0 1 0 2-5M3 4v4h4"/></svg>
+              REINICIAR COMBATE
+            </button>
+          </div>
+        </form>
+
+        <div class="combat-feedback" id="combat-feedback" aria-live="assertive" aria-atomic="true">
+          <span class="feedback-mark" aria-hidden="true">!</span>
+          <span id="combat-message">Configure os personagens e inicie o combate.</span>
+          <span class="damage-number" id="damage-number" aria-hidden="true"></span>
+        </div>
+        <section class="history-section" id="history" aria-labelledby="history-title">
+          <div class="history-heading"><h3 id="history-title">HISTÓRICO DE ATAQUES</h3><span id="history-count">0 REGISTROS</span></div>
+          <ol class="history-list" id="history-list">
+            <li class="history-empty">Nenhum ataque registrado. A batalha começa com você.</li>
+          </ol>
+        </section>
+      </div>
+    </section>
+
+    <section class="section-shell about-section" id="about" aria-labelledby="about-title">
+      <div class="about-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE AWAKENING</div>
+        <h2 id="about-title">Uma lenda desperta.<br><span>A batalha é sua.</span></h2>
+        <p>Anime Arena é uma experiência de RPG de ação feita com HTML, CSS e JavaScript puro. Escolha habilidades, teste seus reflexos no circuito e escreva o próximo capítulo.</p>
+      </div>
+      <div class="tech-stack" aria-label="Tecnologias do projeto">
+        <div class="tech-item"><span class="tech-icon">&lt;/&gt;</span><span>HTML5</span></div>
+        <div class="tech-item"><span class="tech-icon">#</span><span>CSS3</span></div>
+        <div class="tech-item"><span class="tech-icon">JS</span><span>JAVASCRIPT</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="#home">ANIME<span>ARENA</span></a>
+      <span>THE AWAKENING <span class="footer-dot">•</span> FANTASY ACTION RPG</span>
+      <a class="back-top" href="#home">VOLTAR AO TOPO ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
