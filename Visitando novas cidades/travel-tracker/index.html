@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b1b">
+  <meta name="description" content="Registre suas viagens e acompanhe cada cidade que você já explorou.">
+  <title>Travel Tracker — Explore the World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#dashboard" aria-label="Travel Tracker — início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M16 28s10-8.1 10-16A10 10 0 0 0 6 12c0 7.9 10 16 10 16Z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="16" cy="12" r="3.3" stroke="currentColor" stroke-width="1.8"/>
+            <path d="m9.5 24.5-4 3m17-3 4 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">TRAVEL <span>TRACKER</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="nav-link is-active" href="#dashboard">Dashboard</a>
+        <a class="nav-link" href="#journeys">Minhas viagens</a>
+        <a class="nav-link" href="#about">Sobre</a>
+      </nav>
+
+      <a class="destination-counter" href="#journeys" aria-label="Destinos visitados">
+        <span class="counter-icon" aria-hidden="true">✦</span>
+        <span><strong id="headerDestinationCount">0</strong> destinos</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero-section" id="dashboard" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> SEU DIÁRIO DE VIAGEM, REINVENTADO</span>
+          <h1 id="hero-title">Explore o mundo,<br><span>uma cidade de cada vez.</span></h1>
+          <p>Guarde os lugares que marcaram sua jornada. Cada destino conta uma história — e a próxima pode começar agora.</p>
+          <a class="button button-primary hero-cta" href="#trip-form">
+            Registrar uma viagem
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="hero-note"><span class="sparkle" aria-hidden="true">✦</span> Sua próxima lembrança está a um destino de distância.</div>
+        </div>
+
+        <div class="map-card" aria-label="Mapa ilustrativo de viagens pelo mundo">
+          <div class="map-card-top">
+            <span class="map-label"><span class="live-dot"></span> SEU MAPA-MÚNDI</span>
+            <span class="map-coordinates">EXPLORE · 001</span>
+          </div>
+          <div class="map-art">
+            <svg class="world-map" viewBox="0 0 760 410" role="img" aria-labelledby="map-title map-desc">
+              <title id="map-title">Mapa-múndi de destinos</title>
+              <desc id="map-desc">Ilustração de um mapa-múndi com linhas de conexão e pontos de localização.</desc>
+              <defs>
+                <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+                  <path d="M38 0H0V38" fill="none" stroke="#7180ad" stroke-opacity=".11" stroke-width=".7"/>
+                </pattern>
+                <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#6b64db" stop-opacity=".48"/>
+                  <stop offset="1" stop-color="#2aa9c9" stop-opacity=".22"/>
+                </linearGradient>
+                <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <rect width="760" height="410" fill="url(#grid)"/>
+              <g class="map-lines" fill="none" stroke="#9e8aff" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="4 7">
+                <path d="M179 148C267 73 334 113 400 191S532 139 587 144"/>
+                <path d="M179 148c-7 77 44 131 103 162s92-35 118-119"/>
+                <path d="M400 191c41 79 91 89 148 53s54-73 39-100"/>
+              </g>
+              <g fill="url(#land)" stroke="#8c85e7" stroke-opacity=".35" stroke-width="1.3">
+                <path d="m82 91 30-22 52 3 19 18 42 5 22 28-14 17-28 1-13 22-29 6-14 22-26-8-7-25-24-9-17-32 7-26Z"/>
+                <path d="m213 204 29 10 20 28-6 28 20 33-14 41-18 25-13-19-3-34-17-28 5-32-14-26 11-26Z"/>
+                <path d="m322 91 29-20 33 4 13 16 37-5 28 18 35-1 35 17 45-4 45 21-8 21-31 6-14 16-29-4-20 16-22-9-23 13-27-9-13 20-29-6-16-18-29 6-20-17-24 2-17-20-31-3-11-25 16-18-12-18 9-21Z"/>
+                <path d="m390 206 30 3 17 21 3 32-16 21-13 38-18 31-15-22 8-35-9-27 4-31-13-17 22-14Z"/>
+                <path d="m575 286 22-17 34 6 21 21-12 22-31 8-29-13-5-27Z"/>
+                <path d="m637 87 18-11 20 9-3 19-17 8-18-10v-15Z"/>
+                <path d="m287 61 12-10 14 6-2 17-13 9-11-9v-13Z"/>
+              </g>
+              <g class="map-pins" filter="url(#glow)">
+                <g class="map-pin map-pin-one"><circle cx="179" cy="148" r="6" fill="#e1bd79"/><circle cx="179" cy="148" r="12" fill="none" stroke="#e1bd79" stroke-opacity=".5"/></g>
+                <g class="map-pin map-pin-two"><circle cx="400" cy="191" r="6" fill="#a38bff"/><circle cx="400" cy="191" r="12" fill="none" stroke="#a38bff" stroke-opacity=".5"/></g>
+                <g class="map-pin map-pin-three"><circle cx="587" cy="144" r="6" fill="#55c9e8"/><circle cx="587" cy="144" r="12" fill="none" stroke="#55c9e8" stroke-opacity=".5"/></g>
+                <g class="map-pin map-pin-four"><circle cx="282" cy="310" r="5" fill="#55c9e8"/><circle cx="282" cy="310" r="11" fill="none" stroke="#55c9e8" stroke-opacity=".4"/></g>
+              </g>
+            </svg>
+            <span class="map-legend legend-one"><i></i> AMÉRICAS</span>
+            <span class="map-legend legend-two"><i></i> EUROPA</span>
+            <span class="map-legend legend-three"><i></i> ÁSIA</span>
+          </div>
+          <div class="map-card-bottom">
+            <span><span class="map-status-dot"></span> SUA JORNADA, SEU MAPA</span>
+            <span class="map-decoration">✦ <span>WORLDWIDE</span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey-section" id="journeys" aria-labelledby="journey-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow section-eyebrow">PLANEJE · REGISTRE · REVIVA</span>
+            <h2 id="journey-title">Sua jornada <span>até aqui</span></h2>
+          </div>
+          <span class="section-index">01 <span>/</span> DESTINOS</span>
+        </div>
+
+        <div class="journey-grid">
+          <section class="planner-card glass-card" aria-labelledby="planner-title">
+            <div class="card-heading">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.7 7-11.2a7 7 0 1 0-14 0C5 15.3 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.8" r="2.3" stroke="currentColor" stroke-width="1.6"/></svg>
+              </span>
+              <div><h3 id="planner-title">Novo registro</h3><p>Adicione um capítulo à sua viagem</p></div>
+              <span class="step-badge">01</span>
+            </div>
+
+            <form id="tripForm" novalidate>
+              <label class="field-label" for="travelerName">Nome do viajante</label>
+              <input class="text-input" id="travelerName" name="travelerName" type="text" placeholder="Como podemos te chamar?" autocomplete="name" maxlength="60" required>
+
+              <fieldset class="visited-fieldset">
+                <legend class="field-label">Você já visitou alguma cidade?</legend>
+                <div class="choice-row">
+                  <label class="choice-option">
+                    <input type="radio" name="visited" value="yes">
+                    <span class="choice-card"><span class="choice-indicator"></span>Sim, já explorei</span>
+                  </label>
+                  <label class="choice-option">
+                    <input type="radio" name="visited" value="no">
+                    <span class="choice-card"><span class="choice-indicator"></span>Ainda não</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="city-field is-hidden" id="cityField">
+                <label class="field-label" for="cityName">Qual cidade você visitou?</label>
+                <div class="city-input-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10.1c0 5-7 10.1-7 10.1S5 15.1 5 10.1a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.6"/></svg>
+                  <input class="text-input" id="cityName" name="cityName" type="text" placeholder="Ex.: Lisboa, Portugal" maxlength="80" autocomplete="off">
+                </div>
+              </div>
+              <p class="no-city-note is-hidden" id="noCityNote">Sem problema — toda grande jornada começa com o primeiro passo.</p>
+
+              <div class="form-actions">
+                <button class="button button-primary" type="submit" id="addDestinationButton" disabled>
+                  Adicionar destino
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 4v12m-6-6h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </button>
+                <button class="button button-secondary" type="button" id="finishTripButton" disabled>Finalizar viagem</button>
+              </div>
+              <p class="form-hint">Seus registros ficam salvos neste dispositivo.</p>
+            </form>
+          </section>
+
+          <section class="destinations-card glass-card" aria-labelledby="destinations-title">
+            <div class="card-heading results-heading">
+              <div>
+                <span class="eyebrow card-eyebrow">SEU PASSAPORTE PESSOAL</span>
+                <h3 id="destinations-title">Destinos visitados</h3>
+              </div>
+              <span class="destination-total" id="destinationCount">00</span>
+            </div>
+            <div class="traveler-summary is-hidden" id="travelerSummary">
+              <span class="avatar" id="travelerInitials">V</span>
+              <span><small>VIAJANTE</small><strong id="summaryTravelerName"></strong></span>
+              <span class="summary-status" id="tripStatus">EM ANDAMENTO</span>
+            </div>
+            <div class="destination-list" id="destinationList" aria-live="polite"></div>
+            <div class="results-footer">
+              <p class="save-status" id="saveStatus" role="status" aria-live="polite">Seus próximos destinos esperam por você.</p>
+              <button class="clear-button" id="clearButton" type="button">Limpar cadastro</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="closing-note" id="about">
+        <span class="closing-star" aria-hidden="true">✦</span>
+        <p>O mundo é grande. Suas histórias também.</p>
+        <span class="closing-caption">FEITO PARA QUEM NUNCA PARA DE EXPLORAR</span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#dashboard">TRAVEL <span>TRACKER</span></a>
+      <span>Um lugar para cada lembrança.</span>
+      <span>© <span id="currentYear"></span> TRAVEL TRACKER</span>
+    </footer>
+  </div>
+</body>
+</html>
