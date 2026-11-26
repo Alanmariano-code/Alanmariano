@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
+  <meta name="description" content="Dois desafios interativos de JavaScript em um laboratório moderno: tabuada e palíndromos.">
+  <title>JavaScript Lab — Pratique com propósito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="page-glow page-glow--top" aria-hidden="true"></div>
+  <div class="page-glow page-glow--bottom" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="JavaScript Lab, início">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M8 8h16v16H8z" stroke="currentColor" stroke-width="1.7" />
+          <path d="m13 13 3 3-3 3m6 0h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+      <span>JavaScript <span class="brand-light">Lab</span></span>
+    </a>
+    <span class="header-status"><span class="status-dot"></span> LABORATÓRIO INTERATIVO</span>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="eyebrow-line"></span> APRENDER FAZENDO <span class="eyebrow-line"></span></div>
+      <h1 id="page-title">Código que <span class="gradient-text">ganha vida.</span></h1>
+      <p class="hero-description">Um espaço para praticar lógica, experimentar ideias e ver o JavaScript em ação. Escolha um desafio e comece.</p>
+      <div class="hero-meta" aria-label="Informações do laboratório">
+        <span><span class="meta-icon">✳</span> 02 desafios</span>
+        <span class="meta-separator" aria-hidden="true"></span>
+        <span>100% JavaScript</span>
+        <span class="meta-separator" aria-hidden="true"></span>
+        <span>Feito para aprender</span>
+      </div>
+    </section>
+
+    <section class="challenge-grid" aria-label="Desafios interativos">
+      <article class="challenge-card multiplication-card" aria-labelledby="multiplication-title">
+        <div class="card-topline">
+          <div class="icon-tile icon-tile--violet" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 5h14v14H5z" stroke="currentColor" stroke-width="1.6" rx="3" />
+              <path d="m9 9 6 6m0-6-6 6M12 3v2m0 14v2M3 12h2m14 0h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+          </div>
+          <span class="challenge-number">DESAFIO 01</span>
+        </div>
+
+        <h2 id="multiplication-title">Robô da tabuada</h2>
+        <p class="card-description">Uma sequência de multiplicações, calculada na velocidade do JavaScript.</p>
+
+        <form id="multiplication-form" class="challenge-form" novalidate>
+          <label for="number-input">Qual número vamos explorar?</label>
+          <div class="input-row">
+            <div class="input-wrap">
+              <span class="input-prefix" aria-hidden="true">×</span>
+              <input id="number-input" name="number" type="number" step="any" placeholder="Ex.: 7" inputmode="decimal" aria-describedby="number-help number-error">
+            </div>
+            <button class="button button--primary" type="submit">
+              Calcular
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+          </div>
+          <p class="field-hint" id="number-help">Vamos do 1 ao 20. Aceita números inteiros ou decimais.</p>
+          <p class="field-error" id="number-error" role="alert"></p>
+        </form>
+
+        <section class="results-panel" aria-label="Resultado da tabuada">
+          <div class="results-heading">
+            <span class="results-label">SUA TABUADA</span>
+            <button class="text-button" id="clear-multiplication" type="button" disabled>
+              <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3.5 5h11m-9.5 0 .7 9h6.6l.7-9M7 5V3.5h4V5m-3.5 3v3m3-3v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              Limpar
+            </button>
+          </div>
+          <p class="results-placeholder" id="multiplication-placeholder">Sua sequência aparece aqui, pronta para explorar.</p>
+          <div class="multiplication-results" id="multiplication-results" aria-live="polite"></div>
+        </section>
+      </article>
+
+      <article class="challenge-card palindrome-card" aria-labelledby="palindrome-title">
+        <div class="card-topline">
+          <div class="icon-tile icon-tile--mint" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 8h14M5 16h14M8 5v6m8-6v6m-8 2v6m8-6v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              <path d="m3.5 6 1.5 2 1.5-2m13 12-1.5-2-1.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span class="challenge-number">DESAFIO 02</span>
+        </div>
+
+        <h2 id="palindrome-title">Procurando palíndromos</h2>
+        <p class="card-description">Será que a palavra continua igual quando lida de trás para frente?</p>
+
+        <form id="palindrome-form" class="challenge-form" novalidate>
+          <label for="word-input">Digite uma palavra para testar</label>
+          <div class="input-row">
+            <div class="input-wrap">
+              <span class="input-prefix input-prefix--letters" aria-hidden="true">Aa</span>
+              <input id="word-input" name="word" type="text" placeholder="Ex.: radar" autocomplete="off" aria-describedby="word-help word-error">
+            </div>
+            <button class="button button--secondary" type="submit">
+              Verificar
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </button>
+          </div>
+          <p class="field-hint" id="word-help">Maiúsculas e minúsculas não fazem diferença.</p>
+          <p class="field-error" id="word-error" role="alert"></p>
+        </form>
+
+        <section class="results-panel palindrome-panel" aria-label="Resultado da verificação">
+          <div class="results-heading">
+            <span class="results-label">RESULTADO DA ANÁLISE</span>
+            <button class="text-button" id="clear-palindrome" type="button" disabled>
+              <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3.5 5h11m-9.5 0 .7 9h6.6l.7-9M7 5V3.5h4V5m-3.5 3v3m3-3v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              Limpar
+            </button>
+          </div>
+          <p class="results-placeholder" id="palindrome-placeholder">A resposta está a uma palavra de distância.</p>
+          <div class="palindrome-result" id="palindrome-result" aria-live="polite"></div>
+        </section>
+      </article>
+    </section>
+
+    <div class="bottom-note"><span class="bottom-note-sparkle" aria-hidden="true">✦</span> Pequenos passos. Grandes ideias.</div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#" aria-label="JavaScript Lab, início">
+      <span class="footer-mark" aria-hidden="true">JS</span>
+      <span>JavaScript Lab</span>
+    </a>
+    <p>Desenvolvido com dedicação aos estudos de programação</p>
+    <span class="footer-year">EST. 2025</span>
+  </footer>
+</body>
+</html>
