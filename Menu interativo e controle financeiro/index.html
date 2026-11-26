@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exercícios interativos de JavaScript: menu e controle financeiro.">
+  <title>Exercícios interativos em JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/menu-interativo.js" defer></script>
+  <script src="js/controle-financeiro.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="intro">
+      <p class="eyebrow">JavaScript puro · sem frameworks</p>
+      <h1>Exercícios interativos</h1>
+      <p>Escolha um exercício para começar. As interações acontecem em caixas de diálogo do navegador.</p>
+    </header>
+
+    <section class="exercise-grid" aria-label="Exercícios disponíveis">
+      <article class="exercise-card">
+        <span class="exercise-number" aria-hidden="true">01</span>
+        <h2>Menu Interativo</h2>
+        <p>Escolha entre quatro opções e encerre quando quiser.</p>
+        <button type="button" id="start-menu">Iniciar exercício</button>
+      </article>
+
+      <article class="exercise-card">
+        <span class="exercise-number" aria-hidden="true">02</span>
+        <h2>Controle Financeiro</h2>
+        <p>Adicione ou remova valores, respeitando o saldo disponível.</p>
+        <button type="button" id="start-finances">Iniciar exercício</button>
+      </article>
+    </section>
+
+    <footer>Os exercícios usam <code>prompt()</code> e <code>alert()</code> nativos do navegador.</footer>
+  </main>
+</body>
+</html>
