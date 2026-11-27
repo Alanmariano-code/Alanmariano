@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c12">
+  <meta name="description" content="Gerencie seu baralho de cartas com o CardStack.">
+  <title>CardStack — Gerenciador de Baralho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="CardStack, início">
+        <span class="brand-mark" aria-hidden="true">
+          <i data-lucide="layers-2"></i>
+        </span>
+        <span>card<span class="brand-accent">stack</span></span>
+      </a>
+      <div class="topbar-actions">
+        <span class="status-pill"><span class="status-dot"></span>Seu espaço de jogo</span>
+        <button class="icon-button sound-toggle" id="sound-toggle" type="button" aria-label="Ativar sons" title="Ativar sons">
+          <i data-lucide="volume-x"></i>
+        </button>
+        <span class="avatar" aria-label="Perfil">C</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-heading" aria-labelledby="page-title">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> SEU ESPAÇO DE JOGO</div>
+          <h1 id="page-title">Gerenciador de <span>Baralho</span></h1>
+          <p>Gerencie suas cartas com facilidade. Seu próximo movimento começa aqui.</p>
+        </div>
+        <div class="heading-decoration" aria-hidden="true">
+          <span class="deco-suit">♠</span><span class="deco-suit">♦</span><span class="deco-suit">♣</span>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Estatísticas do baralho">
+        <article class="stat-card">
+          <div class="stat-top"><span class="stat-icon purple"><i data-lucide="layers-2"></i></span><span class="stat-label">NO BARALHO</span></div>
+          <div class="stat-value" id="current-count">0</div>
+          <div class="stat-caption">cartas disponíveis</div>
+          <span class="stat-watermark" aria-hidden="true">♠</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span class="stat-icon gold"><i data-lucide="circle-plus"></i></span><span class="stat-label">CARTAS ADICIONADAS</span></div>
+          <div class="stat-value" id="added-count">0</div>
+          <div class="stat-caption">cartas adicionadas no total</div>
+          <span class="stat-watermark gold-mark" aria-hidden="true">♦</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span class="stat-icon coral"><i data-lucide="circle-minus"></i></span><span class="stat-label">CARTAS RETIRADAS</span></div>
+          <div class="stat-value" id="removed-count">0</div>
+          <div class="stat-caption">cartas puxadas no total</div>
+          <span class="stat-watermark coral-mark" aria-hidden="true">♥</span>
+        </article>
+      </section>
+
+      <section class="table-section" aria-labelledby="deck-section-title">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">MESA DE JOGO</div>
+            <h2 id="deck-section-title">Seu baralho</h2>
+          </div>
+          <div class="deck-count"><span class="count-pulse"></span><span id="deck-count-label">0 cartas</span></div>
+        </div>
+
+        <div class="game-layout">
+          <div class="deck-panel">
+            <div class="panel-topline">
+              <span><i data-lucide="sparkles"></i> CARTA DO TOPO</span>
+              <button class="text-button" id="shuffle-button" type="button" title="Embaralhar cartas">
+                <i data-lucide="shuffle"></i><span>Embaralhar</span>
+              </button>
+            </div>
+            <div class="deck-stage" id="deck-stage">
+              <div class="stack-card stack-card-back stack-back-three" aria-hidden="true"></div>
+              <div class="stack-card stack-card-back stack-back-two" aria-hidden="true"></div>
+              <div class="stack-card stack-card-back stack-back-one" aria-hidden="true"></div>
+              <div class="playing-card empty-card" id="top-card" aria-live="polite">
+                <div class="empty-card-inner">
+                  <span class="empty-card-icon"><i data-lucide="plus"></i></span>
+                  <span class="empty-card-title">Seu baralho está vazio</span>
+                  <span class="empty-card-copy">Adicione uma carta para começar</span>
+                </div>
+              </div>
+            </div>
+            <div class="deck-caption"><span class="caption-dot"></span><span id="top-card-label">Aguardando sua primeira carta</span></div>
+          </div>
+
+          <aside class="actions-panel" aria-labelledby="actions-title">
+            <div class="actions-heading">
+              <span class="actions-icon"><i data-lucide="zap"></i></span>
+              <div><h3 id="actions-title">Ações rápidas</h3><p>O que vamos fazer agora?</p></div>
+            </div>
+            <div class="action-list">
+              <button class="action-button primary-action" id="add-button" type="button">
+                <span class="action-button-icon"><i data-lucide="plus"></i></span>
+                <span class="action-button-text"><strong>Adicionar carta</strong><small>Coloque uma nova carta no baralho</small></span>
+                <i class="action-chevron" data-lucide="arrow-up-right"></i>
+              </button>
+              <button class="action-button" id="draw-button" type="button">
+                <span class="action-button-icon draw-icon"><i data-lucide="hand"></i></span>
+                <span class="action-button-text"><strong>Puxar uma carta</strong><small>Retire a carta do topo do baralho</small></span>
+                <i class="action-chevron" data-lucide="arrow-up-right"></i>
+              </button>
+              <button class="action-button" id="view-button" type="button">
+                <span class="action-button-icon view-icon"><i data-lucide="gallery-vertical-end"></i></span>
+                <span class="action-button-text"><strong>Visualizar baralho</strong><small>Confira todas as cartas disponíveis</small></span>
+                <i class="action-chevron" data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+            <div class="tip-card">
+              <span class="tip-icon"><i data-lucide="lightbulb"></i></span>
+              <p><strong>Dica rápida</strong> Você também pode embaralhar suas cartas a qualquer momento.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <footer class="footer"><span><span class="footer-brand">cardstack</span> <span class="footer-separator">·</span> Seu jogo, do seu jeito.</span><span class="footer-note"><i data-lucide="shield-check"></i> Seus dados ficam salvos neste dispositivo</span></footer>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="modal-backdrop" id="deck-modal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div><div class="section-kicker">VISÃO GERAL</div><h2 id="modal-title">Seu baralho</h2><p id="modal-subtitle">0 cartas disponíveis</p></div>
+        <button class="icon-button modal-close" id="close-modal" type="button" aria-label="Fechar visualização"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-content" id="modal-content"></div>
+      <div class="modal-footer"><span id="modal-count">0 cartas</span><button class="secondary-button" id="done-button" type="button">Concluído</button></div>
+    </section>
+  </div>
+</body>
+</html>
